@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 
+from caex.creds import caex_db
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -78,14 +80,15 @@ WSGI_APPLICATION = 'caex.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'caexdb',
-        'USER': 'admin',
-        'PASSWORD': 'root812',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+    'default': caex_db
+    #     {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'caexdb',
+    #     'USER': 'admin',
+    #     'PASSWORD': 'root812',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',
+    # }
 }
 
 
