@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-j1rsy8d5=3gd+@y96(msbq9ewjwrg5hs$rp79)a3ed6d=k%*tc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['85.193.90.163',]
 
 
 # Application definition
@@ -81,14 +81,6 @@ WSGI_APPLICATION = 'caex.wsgi.application'
 
 DATABASES = {
     'default': caex_db
-    #     {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'caexdb',
-    #     'USER': 'admin',
-    #     'PASSWORD': 'root812',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '5432',
-    # }
 }
 
 
