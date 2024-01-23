@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    context = {
+        'title': 'Easy Crypto'
+    }
+    return render(request, template_name='easycrypto/easy.html', context=context)

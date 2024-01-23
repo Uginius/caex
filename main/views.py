@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h1>First step in USA financial system</h1>')
+    context = {
+        'title': 'First step in USA financial system'
+    }
+    return render(request, template_name='main/main.html', context=context)
