@@ -3,6 +3,21 @@
 {% block content %}
 
     <h1>{{ title }}</h1>
+    <p>A 24/7 support specialist will contact you shortly.</p>
+    <h2>Contacts</h2>
+    <p>info@caex.io</p>
+    <p>MSB License Number 31000251129247</p>
+    <p>+1 747 609 7005<br>+1 747 609 7278</p>
+    <h2>Social Media</h2>
+    <div class="row">
+        {% for smm in socialmedia %}
+            <div>{{ smm.name }}</div>
+        {% endfor %}
+    </div>
+    <h2>Feedback Form</h2>
+    <p>Use this form if you want to ask us a question, or inform us about a problem or bug. Please make your message is
+        as detailed as possible as it will help us to solve the problem much faster. Keep in mind that we will not be
+        able to reply to you if you specify an invalid phone or e-mail address.</p>
     <div class="col-md-6">
         <form action="" method="post">
             {% csrf_token %}
