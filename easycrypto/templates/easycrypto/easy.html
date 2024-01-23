@@ -3,6 +3,16 @@
 {% block content %}
 
     <h1>{{ title }}</h1>
+    <div class="row">
+        {% for tru in trusted %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ tru.title }}</h5>
+                    <div class="card-text">{{ tru.text }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
 
