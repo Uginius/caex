@@ -7,14 +7,14 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a href="#">f.a.q.</a></li>
-                <li><a href="#">how to buy/sell crypto</a></li>
-                <li><a href="#">contacts</a></li>
+                <li><a href="{% url 'faq' %}">f.a.q.</a></li>
+                <li><a href="{% url 'easy' %}">easy go crypto</a></li>
+                <li><a href="{% url 'contacts' %}">contacts</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav><!-- .navbar -->
 
-        <a class="btn-getstarted scrollto" href="index.html#about">sign in to wishlist</a>
+        <a class="btn-getstarted scrollto" href="{% url 'register' %}">register | login</a>
 
     </div>
 </header>

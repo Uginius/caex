@@ -24,9 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', include('main.urls'), name='home'),
-    path('faq/', include('faq.urls')),
-    path('easy/', include('easycrypto.urls')),
-    path('contacts/', include('contacts.urls')),
+    path('faq/', include('faq.urls'), name='faq'),
+    path('easy/', include('easycrypto.urls'), name='easy'),
+    path('contacts/', include('contacts.urls'), name='contacts'),
 ]
 
 if settings.DEBUG:
