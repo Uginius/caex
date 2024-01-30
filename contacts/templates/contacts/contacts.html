@@ -1,31 +1,74 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h1>{{ title }}</h1>
+                <p>A 24/7 support specialist will contact you shortly.</p>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6 contact">
+                    <div class="info">
+                        <div class="info-item d-flex">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h4>Licence:</h4>
+                                <p>MSB License Number 31000251129247</p>
+                            </div>
+                        </div>
+                        <div class="info-item d-flex">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h4>Location:</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+                        </div><!-- End Info Item -->
+                        <div class="info-item d-flex">
+                            <i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h4>Email:</h4>
+                                <p>info@example.com</p>
+                            </div>
+                        </div><!-- End Info Item -->
+                        <div class="info-item d-flex">
+                            <i class="bi bi-phone flex-shrink-0"></i>
+                            <div>
+                                <h4>Call:</h4>
+                                <p>
+                                    <a href="tel:+17476097005">+1 747 609 7005</a><br>
+                                    <a href="tel:+17476097278">+1 747 609 7278</a>
+                                </p>
+                            </div>
+                        </div><!-- End Info Item -->
 
-    <h1>{{ title }}</h1>
-    <p>A 24/7 support specialist will contact you shortly.</p>
-    <h2>Contacts</h2>
-    <p>info@caex.io</p>
-    <p>MSB License Number 31000251129247</p>
-    <p>+1 747 609 7005<br>+1 747 609 7278</p>
-    <h2>Social Media</h2>
-    <div class="row">
-        {% for smm in socialmedia %}
-            <div>{{ smm.name }}</div>
-        {% endfor %}
-    </div>
-    <h2>Feedback Form</h2>
-    <p>Use this form if you want to ask us a question, or inform us about a problem or bug. Please make your message is
-        as detailed as possible as it will help us to solve the problem much faster. Keep in mind that we will not be
-        able to reply to you if you specify an invalid phone or e-mail address.</p>
-    <div class="col-md-6">
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+                    </div>
 
+                    {#                    <h2>Social Media</h2>#}
+                    {#                    <div class="row">#}
+                    {#                        {% for smm in socialmedia %}#}
+                    {#                            <div>{{ smm.name }}</div>#}
+                    {#                        {% endfor %}#}
+                    {#                    </div>#}
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2>Feedback Form</h2>
+                    <p>Use this form if you want to ask us a question, or inform us about a problem or bug. Please make
+                        your message is as detailed as possible as it will help us to solve the problem much faster.
+                        Keep in mind that we will not be able to reply to you if you specify an invalid phone or e-mail
+                        address.</p>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
 {% endblock %}
 
 

@@ -14,7 +14,7 @@ def index(request):
         if form.is_valid():
             # feedback =
             form.save()
-            return redirect('contacts/contacts.html')
+            return redirect('/contacts')
     else:
         context['form'] = FeedbackForm()
         return render(request, template_name='contacts/contacts.html', context=context)

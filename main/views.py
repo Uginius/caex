@@ -12,7 +12,33 @@ from main.models import Profile
 
 def index(request):
     context = {
-        'title': 'First step in USA financial system'
+        'title': 'Welcome to <span> CAEX </span>',
+        'caption': 'First step in the USA financial system (тут можно еще воды налить)',
+        'services': [
+            {
+                'title': 'Cryptocurrency exchange',
+                'caption': 'Тут не хватает каких-нибудь текстов',
+                'icon': 'icon-wallet.png',
+            },
+            {
+                'title': 'Foreign currency exchange',
+                'caption': '',
+                'icon': 'icon-banknotes.png',
+
+            },
+            {
+                'title': 'Bank account',
+                'caption': 'powered&nbsp;by Neobank&nbsp;solutions.<br/>Starting Q3&nbsp;2024',
+                'icon': 'icon-monitor.png',
+
+            },
+            {
+                'title': 'Money transfer',
+                'caption': 'starting Q3&nbsp;2024',
+                'icon': 'icon-money-cloud.png',
+
+            }
+        ]
     }
     return render(request, template_name='main/main.html', context=context)
 

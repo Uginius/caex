@@ -2,7 +2,64 @@
 
 {% block content %}
 
-    <h1>{{ title }}</h1>
+    <section id="hero-animated" class="hero-animated d-flex align-items-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative">
+            <h2>
+                {% autoescape off %}
+                    {{ title }}
+                {% endautoescape %}
+            </h2>
+            <p>{{ caption }}</p>
+        </div>
+    </section>
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services" data-aos="fade-up">
+        <div class="container">
+            <div class="row gy-4">
+                {% for item in services %}
+                    <div class="col-xl-3 col-md-6 d-flex">
+                        <div class="service-item position-relative">
+                            <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
+                            <h4>{% autoescape off %} {{ item.title }} {% endautoescape %}</h4>
+                            <p>{% autoescape off %} {{ item.caption }} {% endautoescape %}</p>
+                        </div>
+                    </div><!-- End Service Item -->
+                {% endfor %}
+            </div>
+            <div class="row gy-4">
+                <div class="d-flex">
+                    <a href="#about" class="btn btn-primary btn-get-started mx-auto">Sign in for wishlist</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Featured Services Section -->
+
+       <section id="onfocus" class="onfocus">
+        <div class="container-fluid p-0" data-aos="fade-up">
+
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="content d-flex flex-column justify-content-center h-100">
+                        <h3>CAEX today</h3>
+                        <p class="fst-italic">
+                            Cryptocurrency exchange service that focuses on immigrants who have recently arrived in USA
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i>5000 Clients</li>
+                            <li><i class="bi bi-check-circle"></i>Offices in Los Angeles (California)</li>
+                            <li><i class="bi bi-check-circle"></i>24/7 Customer Support</li>
+                            <li><i class="bi bi-check-circle"></i>Hundreds of positive reviews</li>
+                            <li><i class="bi bi-check-circle"></i>Money Service Business Registration with FinCEN</li>
+                        </ul>
+                        <a href="#" class="read-more align-self-start"><span>Sign up for wishlist</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End On Focus Section -->
+
+
 
 {% endblock %}
 

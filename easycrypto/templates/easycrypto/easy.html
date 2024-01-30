@@ -1,18 +1,62 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    <h1>{{ title }}</h1>
-    <div class="row">
-        {% for tru in trusted %}
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ tru.title }}</h5>
-                    <div class="card-text">{{ tru.text }}</div>
+    <section class="bg-teal">
+        <div class="container">
+            <h1 class="section-header">{% autoescape off %} {{ title }} {% endautoescape %}</h1>
+            <div class="row mx-auto gy-4 advantages featured-services">
+                {% for tru in trusted %}
+                    <div class="col-xl-6 col-12 d-flex">
+                        <div class="service-item flex-grow-1 text-center">
+                            <h4>{{ tru.title }}</h4>
+                            <p>{{ tru.text }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="payment-methods container">
+            <h2 class="h1 section-header">Payment methods & Interest rates</h2>
+            <img class="payment-methods__schema" src="/media/img/payment_methods.svg" alt=""/>
+            <p>CRYPTO* — BITCOIN, ETHEREUM, USDT (STABLECOINS)<br/>
+                BLOCKCHAIN TRANSACTION** - PAYMENT VIA SELECTED BLOCKCHAIN</p>
+        </div>
+    </section>
+    <section class="how-to bg-teal">
+        <div class="container">
+            <h2 class="h1 section-header">
+                How to buy/sell crypto
+            </h2>
+            <div class="how-to__list">
+                <div class="how-to__step how-to__step-1">
+                    Create your free account
+                </div>
+                <div class="how-to__step how-to__step-2">
+                    Complete your account setup by KYC/AML process.
+                </div>
+                <div class="how-to__step how-to__step-3">
+                    Choose the amount of crypto you’d like to buy or sell, then select your payment option.
                 </div>
             </div>
-        {% endfor %}
-    </div>
+
+        </div>
+    </section>
+    <section class="steps-buysell">
+        <div class="container">
+            <img class="payment-methods__schema" src="/media/img/onboarding.png" alt=""/>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="container">
+            <h2 class="h1 section-header">Our partners</h2>
+            <div class="partners-list">
+                <img src="/media/img/amlbot-logo.svg" alt="AMLBot logo"/>
+                <img src="/media/img/argoskyc-logo.svg"/>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
 
