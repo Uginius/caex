@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Login :: {{ block.super }} {% endblock %}
+
+{% block content %}
+    <h1>Welcome to Wishlist!</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </p>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+{% endblock %}
+
+{#{% block content %}#}
+{#    <form method="post">#}
+{#        {% csrf_token %}#}
+{#        {{ form.as_p }}#}
+{#        <button type="submit">Login</button>#}
+{#    </form>#}
+{#{% endblock %}#}

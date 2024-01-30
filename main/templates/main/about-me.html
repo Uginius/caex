@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} About me {% endblock %}
+{% block content %}
+    <h1>User info</h1>
+    {% if user.is_authenticated %}
+        <h2>Detail</h2>
+        <p>Username: {{ user.username }}</p>
+        <p>First name: {{ user.first_name }}</p>
+        <p>Last name: {{ user.last_name }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Cryptocurrency Exchange: {{ user.profile.crypto_exchange }}</p>
+        <p>Foreign Currency Exchange: {{ user.profile.foreign_exchange }}</p>
+        <p>Bank Account: (Powered by Neobank Solution) {{ user.profile.bank_account }}</p>
+        <p>Money Transfer: {{ user.profile.money_transfer }}</p>
+        <p><a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <h2>User is anonymous</h2>
+    {% endif %}
+{% endblock %}
