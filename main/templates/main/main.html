@@ -61,11 +61,16 @@
                             <p>{{ item.caption }}</p>
                         </div>
                     </div>
+                    {% if not forloop.last %}
+                        <h3 class="ms-5 mt-1 text-primary"><p>↓</p></h3>
+                    {% endif %}
                 {% endfor %}
             </div>
             <br>
             <br>
-            <div class="text-bg-success p-3">On average, adults in the US use the same primary checking account for more than 17 years.</div>
+            <div class="text-bg-success p-3">On average, adults in the US use the same primary checking account for more
+                than 17 years.
+            </div>
         </div>
     </section>
     <section id="onfocus" class="onfocus">
