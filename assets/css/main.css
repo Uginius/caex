@@ -41,6 +41,7 @@ html, body {
     flex-direction: column;
     flex-grow: 1;
 }
+
 .very-main-content {
     flex-grow: 1;
 }
@@ -577,7 +578,7 @@ section.bg-teal {
 .hero-animated {
     width: 100%;
     min-height: 50vh;
-    background: url("/media/img/hero-bg.png") center center;
+    background: #3b5380;
     background-size: cover;
     position: relative;
     padding: 120px 0 60px;
@@ -585,9 +586,9 @@ section.bg-teal {
 
 .hero-animated h1 {
     margin: 0 0 10px 0;
-    font-size: 48px;
-    font-weight: 300;
-    color: var(--color-secondary);
+    font-size: 72px;
+    font-weight: 700;
+    color: white;
     font-family: var(--font-secondary);
 }
 
@@ -596,7 +597,7 @@ section.bg-teal {
 }
 
 .hero-animated p {
-    color: rgba(var(--color-secondary-rgb), 0.8);
+    color: white;
     margin: 0 0 30px 0;
     font-size: 20px;
     font-weight: 400;
@@ -3256,5 +3257,17 @@ section.bg-teal {
 
 .partners-list img {
     display: block;
+    width: 200px;
+}
+
+
+.auth-form {
+    padding: 25px 20px;
+    box-shadow: 5px 5px 25px rgba(var(--color-secondary-rgb), 0.15);
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.auth-form .btn {
     width: 200px;
 }

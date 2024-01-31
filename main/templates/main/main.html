@@ -5,7 +5,7 @@
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
         <div class="container">
             <h1>
-               {{ title }}
+                {{ title }}
             </h1>
             <div class="row mt-5">
                 <div class="col-12 col-lg-7">
@@ -22,7 +22,18 @@
     <section id="featured-services" class="featured-services" data-aos="fade-up">
         <div class="container">
             <div class="row gy-4">
-                {% for item in services %}
+                {% for item in currencyServices %}
+                    <div class="col-xl-3 col-md-6 d-flex">
+                        <div class="service-item position-relative">
+                            <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
+                            <h4>{% autoescape off %} {{ item.title }} {% endautoescape %}</h4>
+                            <p>{% autoescape off %} {{ item.caption }} {% endautoescape %}</p>
+                        </div>
+                    </div><!-- End Service Item -->
+                {% endfor %}
+            </div>
+            <div class="row gy-4">
+                {% for item in bankServices %}
                     <div class="col-xl-3 col-md-6 d-flex">
                         <div class="service-item position-relative">
                             <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
@@ -36,7 +47,7 @@
     </section><!-- End Featured Services Section -->
 
     <section id="onfocus" class="onfocus">
-        <div class="container-fluid p-0" data-aos="fade-up">
+        <div class="container p-0" data-aos="fade-up">
 
             <div class="row g-0">
                 <div class="col-lg-12">

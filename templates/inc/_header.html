@@ -2,7 +2,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-            <img src="/media/img/logo_blue.svg" alt="">
+            <img src="/media/img/caex_logo.svg" alt="">
         </a>
 
         <nav id="navbar" class="navbar">
@@ -13,8 +13,7 @@
                 {% if user.is_authenticated %}
                     <li><a class="btn-getstarted" href="{% url 'about-me' %}">{{ user.username }}</a></li>
                 {% else %}
-                    <li><a href="{% url 'login' %}">Sign in</a></li>
-                    <li><a class="btn-getstarted" href="{% url 'register' %}">Sign up</a></li>
+                    <li><a class="btn-getstarted" href="{% url 'login' %}">Sign in</a></li>
                 {% endif %}
             </ul>
             <i class="bi bi-list mobile-nav-toggle d-none"></i>

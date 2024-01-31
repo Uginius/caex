@@ -14,14 +14,21 @@ def index(request):
     context = {
         'title': 'First step in the USA financial system',
         'caption': 'CAEX empowers newcomer<br/> finance in the USA.',
-        'services': [
+        'cryptoServices': [
             {
-                'title': 'Cryptocurrency exchange',
-                'caption': 'Тут не хватает каких-нибудь текстов',
-                'icon': 'icon-wallet.png',
+                'title': 'Crypto wallet',
+                'caption': '',
+                'icon': 'icon-cryptowallet.png',
             },
             {
-                'title': 'Foreign currency exchange',
+                'title': 'Cryptocurrency exchange',
+                'caption': '',
+                'icon': 'icon-wallet.png',
+            },
+        ],
+        'bankServices': [
+            {
+                'title': 'Cryptocurrency exchange',
                 'caption': '',
                 'icon': 'icon-banknotes.png',
 
