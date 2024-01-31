@@ -4,6 +4,7 @@
 
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
         <div class="container">
+            <br><br>
             <h1>
                 {{ title }}
             </h1>
@@ -48,7 +49,7 @@
     <section class="steps">
         <div class="container">
             <h2>{{ step_title }}</h2>
-        <h2><br/></h2>
+            <h2><br/></h2>
             <div>
                 {% for item in steps %}
                     <div class="step__item">
@@ -62,6 +63,9 @@
                     </div>
                 {% endfor %}
             </div>
+            <br>
+            <br>
+            <div class="text-bg-success p-3">On average, adults in the US use the same primary checking account for more than 17 years.</div>
         </div>
     </section>
     <section id="onfocus" class="onfocus">
@@ -80,6 +84,7 @@
                             <li><i class="bi bi-check-circle"></i>24/7 Customer Support</li>
                             <li><i class="bi bi-check-circle"></i>Hundreds of positive reviews</li>
                             <li><i class="bi bi-check-circle"></i>Money Service Business Registration with FinCEN</li>
+                            <li><i class="bi bi-check-circle"></i>AML/KYC Procedures Implemented</li>
                         </ul>
                         <a href="{% url 'register' %}" class="read-more align-self-start"><span>Sign Me Up</span></a>
                     </div>

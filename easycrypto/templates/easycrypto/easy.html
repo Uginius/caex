@@ -6,36 +6,46 @@
             <h1 class="section-header">{% autoescape off %} {{ title }} {% endautoescape %}</h1>
             <div class="row mx-auto gy-4 advantages featured-services">
                 <div class="col-lg-6 col-12 d-flex">
+                    {% for expertise in trusted %}
                     <div class="service-item flex-grow-1 text-center">
-                        <div class="icon"><img src="/media/img/advantages-icon-shield.png"></div>
-                        <h4>Trusted</h4>
-                        <p>Thousands of satisfied clients</p>
+                        <div class="icon"><img src="/media/img/{{ expertise.image }}"></div>
+                        <h4>{{ expertise.title }}</h4>
+                        <p>{{ expertise.text }}</p>
                     </div>
-                </div>
+                    {% endfor %}
 
-                <div class="col-lg-6 col-12 d-flex">
-                    <div class="service-item flex-grow-1 text-center">
-                        <div class="icon"><img src="/media/img/advantages-icon-man.svg"></div>
-                        <h4>Expert Guidance</h4>
-                        <p>Partner with a knowledgeable client relationship</p>
-                    </div>
                 </div>
-
-                <div class="col-lg-6 col-12 d-flex">
-                    <div class="service-item flex-grow-1 text-center">
-                        <div class="icon"><img src="/media/img/advantages-icon-magnifier.svg"></div>
-                        <h4>No hidden fees</h4>
-                        <p>Zero signup fees, spreads or deposit costs</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12 d-flex">
-                    <div class="service-item flex-grow-1 text-center">
-                        <div class="icon"><img src="/media/img/advantages-icon-phone.png"></div>
-                        <h4>Simple user experience</h4>
-                        <p>Seamless userway</p>
-                    </div>
-                </div>
+{#                <div class="col-lg-6 col-12 d-flex">#}
+{#                    <div class="service-item flex-grow-1 text-center">#}
+{#                        <div class="icon"><img src="/media/img/advantages-icon-shield.png"></div>#}
+{#                        <h4>Trusted</h4>#}
+{#                        <p>Thousands of satisfied clients</p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <div class="col-lg-6 col-12 d-flex">#}
+{#                    <div class="service-item flex-grow-1 text-center">#}
+{#                        <div class="icon"><img src="/media/img/advantages-icon-man.svg"></div>#}
+{#                        <h4>Expert Guidance</h4>#}
+{#                        <p>Partner with a knowledgeable client relationship</p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <div class="col-lg-6 col-12 d-flex">#}
+{#                    <div class="service-item flex-grow-1 text-center">#}
+{#                        <div class="icon"><img src="/media/img/advantages-icon-magnifier.svg"></div>#}
+{#                        <h4>No hidden fees</h4>#}
+{#                        <p>Zero signup fees, spreads or deposit costs</p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <div class="col-lg-6 col-12 d-flex">#}
+{#                    <div class="service-item flex-grow-1 text-center">#}
+{#                        <div class="icon"><img src="/media/img/advantages-icon-phone.png"></div>#}
+{#                        <h4>Simple user experience</h4>#}
+{#                        <p>Seamless userway</p>#}
+{#                    </div>#}
+{#                </div>#}
 
             </div>
         </div>

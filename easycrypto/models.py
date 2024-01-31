@@ -5,7 +5,7 @@ class Expertise(models.Model):
     order = models.IntegerField(null=True, blank=True)
     title = models.CharField(max_length=127)
     text = models.CharField(max_length=127)
-    image = models.ImageField(upload_to='photos/expertise/', blank=True, null=True)
+    image = models.CharField(max_length=127, blank=True, null=True)
     published = models.BooleanField(default=True)
     updated = models.DateTimeField(auto_now=True)
 
