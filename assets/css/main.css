@@ -1342,9 +1342,6 @@ section.bg-teal {
 }
 
 .onfocus {
-    background: linear-gradient(rgba(var(--color-secondary-rgb), 0.5), rgba(var(--color-secondary-rgb), 0.8)), url("../img/onfocus-content-bg.jpg") center center;
-    background-size: cover;
-    color: rgba(var(--color-white-rgb), 0.8);
 }
 
 @media (min-width: 768px) {
@@ -1356,7 +1353,6 @@ section.bg-teal {
 .onfocus .content h3 {
     font-weight: 600;
     font-size: 32px;
-    color: var(--color-white);
 }
 
 .onfocus .content ul {
@@ -3229,23 +3225,35 @@ section.bg-teal {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px;
+    padding: 12px;
+    margin-top: 64px;
 }
 
 .how-to__step {
     position: relative;
-    padding-left: 32px;
-    width: 25%;
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.how-to__image {
+    display: block;
+    width: 64px;
+    margin-right: 24px;
 }
 
 .how-to__step::after {
     counter-increment: how-to;
     content: counter(how-to);
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
     font-size: 72px;
+}
+
+.partners {
+    border-top: 1px var(--bs-gray) solid;
 }
 
 .partners-list {
@@ -3273,16 +3281,18 @@ section.bg-teal {
 
 
 .steps {
-
+    background: rgba(var(--color-secondary-rgb), 0.2);
 }
 
 .step__item {
     display: flex;
     align-items: flex-start;
 }
+
 .step__item:not(:first-child) {
     margin-top: 64px;
 }
+
 .step__icon {
     width: 100px;
     height: 100px;
