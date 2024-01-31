@@ -28,16 +28,14 @@ def index(request):
         ],
         'bankServices': [
             {
-                'title': 'Cryptocurrency exchange',
+                'title': 'Foreign currency exchange',
                 'caption': '',
                 'icon': 'icon-banknotes.png',
-
             },
             {
                 'title': 'Bank account',
                 'caption': 'powered&nbsp;by Neobank&nbsp;solutions.<br/>Starting Q3&nbsp;2024',
                 'icon': 'icon-monitor.png',
-
             },
             {
                 'title': 'Money transfer',
@@ -46,6 +44,7 @@ def index(request):
 
             }
         ],
+        'step_title': 'CAEX focuses on immigrants who have recently arrived in USA',
         'steps': [
             {
                 'title': 'New Client',
