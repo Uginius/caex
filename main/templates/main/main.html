@@ -12,7 +12,7 @@
                     <p>{% autoescape off %}{{ caption }}{% endautoescape %}</p>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <a href="#about" class="btn btn-primary btn-get-started mx-auto">Sign Me Up</a>
+                    <a href="{% url 'register' %}" class="btn btn-primary btn-get-started mx-auto">Sign Me Up</a>
                 </div>
             </div>
 
@@ -47,6 +47,8 @@
     </section><!-- End Featured Services Section -->
     <section class="steps">
         <div class="container">
+            <h2>{{ step_title }}</h2>
+        <h2><br/></h2>
             <div>
                 {% for item in steps %}
                     <div class="step__item">
@@ -68,7 +70,7 @@
             <div class="row g-0">
                 <div class="col-lg-12">
                     <div class="content d-flex flex-column justify-content-center h-100">
-                        <h3>CAEX today</h3>
+                        <h2>CAEX today</h2>
                         <p class="fst-italic">
                             Cryptocurrency exchange service that focuses on immigrants who have recently arrived in USA
                         </p>
@@ -79,7 +81,7 @@
                             <li><i class="bi bi-check-circle"></i>Hundreds of positive reviews</li>
                             <li><i class="bi bi-check-circle"></i>Money Service Business Registration with FinCEN</li>
                         </ul>
-                        <a href="#" class="read-more align-self-start"><span>Sign Me Up</span></a>
+                        <a href="{% url 'register' %}" class="read-more align-self-start"><span>Sign Me Up</span></a>
                     </div>
                 </div>
             </div>
