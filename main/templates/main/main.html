@@ -3,13 +3,19 @@
 {% block content %}
 
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
-        <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative">
-            <h2>
-                {% autoescape off %}
-                    {{ title }}
-                {% endautoescape %}
-            </h2>
-            <p>{{ caption }}</p>
+        <div class="container">
+            <h1>
+               {{ title }}
+            </h1>
+            <div class="row mt-5">
+                <div class="col-12 col-lg-7">
+                    <p>{% autoescape off %}{{ caption }}{% endautoescape %}</p>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <a href="#about" class="btn btn-primary btn-get-started mx-auto">Sign Me Up</a>
+                </div>
+            </div>
+
         </div>
     </section>
     <!-- ======= Featured Services Section ======= -->
@@ -26,15 +32,10 @@
                     </div><!-- End Service Item -->
                 {% endfor %}
             </div>
-            <div class="row gy-4">
-                <div class="d-flex">
-                    <a href="#about" class="btn btn-primary btn-get-started mx-auto">Sign in for wishlist</a>
-                </div>
-            </div>
         </div>
     </section><!-- End Featured Services Section -->
 
-       <section id="onfocus" class="onfocus">
+    <section id="onfocus" class="onfocus">
         <div class="container-fluid p-0" data-aos="fade-up">
 
             <div class="row g-0">

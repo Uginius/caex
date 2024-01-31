@@ -35,6 +35,17 @@ h6 {
     font-family: var(--font-primary);
 }
 
+html, body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.very-main-content {
+    flex-grow: 1;
+}
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -93,7 +104,7 @@ section.bg-teal {
     background-color: rgba(13, 110, 253, 0.2) !important;
 }
 
-header + section {
+.very-main-content section:first-child {
     padding-top: 120px;
 }
 
@@ -572,7 +583,7 @@ header + section {
     padding: 120px 0 60px;
 }
 
-.hero-animated h2 {
+.hero-animated h1 {
     margin: 0 0 10px 0;
     font-size: 48px;
     font-weight: 300;
@@ -580,7 +591,7 @@ header + section {
     font-family: var(--font-secondary);
 }
 
-.hero-animated h2 span {
+.hero-animated h1 span {
     color: var(--color-primary);
 }
 
@@ -1071,7 +1082,6 @@ header + section {
 .featured-services .service-item {
     padding: 30px;
     transition: all ease-in-out 0.4s;
-    background: var(--color-white);
     height: 100%;
     text-align: center;
     width: 100%;
@@ -3210,7 +3220,7 @@ header + section {
 
 .payment-methods__schema {
     display: block;
-    max-width: 900px;
+    max-width: 905px;
     margin: 32px auto;
 }
 

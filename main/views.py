@@ -12,8 +12,8 @@ from main.models import Profile
 
 def index(request):
     context = {
-        'title': 'Welcome to <span> CAEX </span>',
-        'caption': 'First step in the USA financial system (тут можно еще воды налить)',
+        'title': 'First step in the USA financial system',
+        'caption': 'CAEX empowers newcomer<br/> finance in the USA.',
         'services': [
             {
                 'title': 'Cryptocurrency exchange',

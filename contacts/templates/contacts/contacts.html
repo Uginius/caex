@@ -11,19 +11,12 @@
                 <div class="col-12 col-lg-6 contact">
                     <div class="info">
                         <div class="info-item d-flex">
-                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <i class="bi bi-journal flex-shrink-0"></i>
                             <div>
                                 <h4>Licence:</h4>
                                 <p>MSB License Number 31000251129247</p>
                             </div>
                         </div>
-                        <div class="info-item d-flex">
-                            <i class="bi bi-geo-alt flex-shrink-0"></i>
-                            <div>
-                                <h4>Location:</h4>
-                                <p>A108 Adam Street, New York, NY 535022</p>
-                            </div>
-                        </div><!-- End Info Item -->
                         <div class="info-item d-flex">
                             <i class="bi bi-envelope flex-shrink-0"></i>
                             <div>
@@ -43,14 +36,32 @@
                         </div><!-- End Info Item -->
 
                     </div>
+                    <div class="info mt-5">
 
-                    <h2>Social Media</h2>
-                    <div class="row">
-                        {% for smm in socialmedia %}
+                        <div class="info-item d-flex">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
                             <div>
-                                <p><a href="{{ smm.account }}" class="{{ smm.style }}">{{ smm.name }}</a></p>
+                                <h4>Location:</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
                             </div>
+                        </div><!-- End Info Item -->
+                        <div class="info-item d-flex">
+                            <i class="bi bi-clock flex-shrink-0"></i>
+                            <div>
+                                <h4>Opening hours:</h4>
+                                <p>Monday &mdash; Friday: <b>9:00 am &mdash; 7:00 pm</b></p>
+                                <p>Saturday: <b>9:00 am &mdash; 3:00 pm</b></p>
+                                <p>Sunday: <b>by appointment only</b></p>
+                            </div>
+                        </div><!-- End Info Item -->
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        {% for smm in socialmedia %}
+                            <a href="{{ smm.account }}" class="{{ smm.style }} fs-1">
+                                <i class="bi bi-{{ smm.style }}"></i>
+                            </a>
                         {% endfor %}
+
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
