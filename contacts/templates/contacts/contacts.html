@@ -44,12 +44,14 @@
 
                     </div>
 
-                    {#                    <h2>Social Media</h2>#}
-                    {#                    <div class="row">#}
-                    {#                        {% for smm in socialmedia %}#}
-                    {#                            <div>{{ smm.name }}</div>#}
-                    {#                        {% endfor %}#}
-                    {#                    </div>#}
+                    <h2>Social Media</h2>
+                    <div class="row">
+                        {% for smm in socialmedia %}
+                            <div>
+                                <p><a href="{{ smm.account }}" class="{{ smm.style }}">{{ smm.name }}</a></p>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <h2>Feedback Form</h2>
