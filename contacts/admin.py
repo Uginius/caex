@@ -10,8 +10,8 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 @admin.register(Smm)
 class SmmAdmin(admin.ModelAdmin):
-    list_display = 'order', 'name', 'account', 'image'
-    list_display_links = 'name', 'account'
+    list_display = 'order', 'name', 'account', 'style'
+    list_display_links = 'name', 'account', 'style'
 
 
 @admin.register(Subject)

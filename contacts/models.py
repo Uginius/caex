@@ -6,6 +6,7 @@ class Smm(models.Model):
     name = models.CharField(max_length=150)
     account = models.CharField(max_length=255)
     image = models.ImageField(upload_to='uploads/smm/', null=True, blank=True)
+    style = models.CharField(max_length=150, null=True, blank=True)
 
     def __str__(self):
         return self.name
