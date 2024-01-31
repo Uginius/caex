@@ -21,8 +21,8 @@
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services" data-aos="fade-up">
         <div class="container">
-            <div class="row gy-4">
-                {% for item in currencyServices %}
+            <div class="row justify-content-around gy-4">
+                {% for item in cryptoServices %}
                     <div class="col-xl-3 col-md-6 d-flex">
                         <div class="service-item position-relative">
                             <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
@@ -32,7 +32,7 @@
                     </div><!-- End Service Item -->
                 {% endfor %}
             </div>
-            <div class="row gy-4">
+            <div class="row  justify-content-around  gy-4">
                 {% for item in bankServices %}
                     <div class="col-xl-3 col-md-6 d-flex">
                         <div class="service-item position-relative">
@@ -45,7 +45,23 @@
             </div>
         </div>
     </section><!-- End Featured Services Section -->
-
+    <section>
+        <div class="container">
+            <div class="steps">
+                {% for item in steps %}
+                    <div class="step__item">
+                        <div class="step__icon">
+                            <img src="/media/img/{{ item.icon }}" alt=""/>
+                        </div>
+                        <div class="step__text">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.caption }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
     <section id="onfocus" class="onfocus">
         <div class="container p-0" data-aos="fade-up">
 

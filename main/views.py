@@ -16,7 +16,7 @@ def index(request):
         'caption': 'CAEX empowers newcomer<br/> finance in the USA.',
         'cryptoServices': [
             {
-                'title': 'Crypto wallet',
+                'title': 'Cryptocurrency wallet',
                 'caption': '',
                 'icon': 'icon-cryptowallet.png',
             },
@@ -45,6 +45,33 @@ def index(request):
                 'icon': 'icon-money-cloud.png',
 
             }
+        ],
+        'steps': [
+            {
+                'title': 'New Client',
+                'caption': 'For those who just arrived in the country and do not yet have a bank account',
+                'icon': 'steps-icon-1.png'
+            },
+            {
+                'title': 'Currency Exchange',
+                'caption': 'Client receives first sum of USD in the USA provided that they have assets in a different country (fiat, crypto)',
+                'icon': 'steps-icon-2.svg'
+            },
+            {
+                'title': 'Virtual Prepaid Card With Immediate Activation',
+                'caption': 'Clients are given a prepaid card for some initial expenses to help them get settled and begin their life in the US (Groceries, transportation, hotel, etc.)',
+                'icon': 'steps-icon-3.png'
+            },
+            {
+                'title': 'Neo Bank Account',
+                'caption': 'Clients are provided with account set up assistance for rent, car payments, insurance, etc. (Most newcomers only use one bank account in their first year in the US)',
+                'icon': 'steps-icon-4.png'
+            },
+            {
+                'title': 'Long-Term Client',
+                'caption': 'Clients will also have the possibility to set up savings accounts, credit accounts, or business accounts, and be able to transfer money to relatives in a different country',
+                'icon': 'steps-icon-5.png'
+            },
         ]
     }
     return render(request, template_name='main/main.html', context=context)

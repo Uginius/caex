@@ -1341,11 +1341,10 @@ section.bg-teal {
     background-size: cover;
 }
 
-.onfocus .content {
+.onfocus {
     background: linear-gradient(rgba(var(--color-secondary-rgb), 0.5), rgba(var(--color-secondary-rgb), 0.8)), url("../img/onfocus-content-bg.jpg") center center;
     background-size: cover;
     color: rgba(var(--color-white-rgb), 0.8);
-    padding: 40px;
 }
 
 @media (min-width: 768px) {
@@ -3270,4 +3269,31 @@ section.bg-teal {
 
 .auth-form .btn {
     width: 200px;
+}
+
+
+.steps {
+
+}
+
+.step__item {
+    display: flex;
+    align-items: flex-start;
+}
+.step__item:not(:first-child) {
+    margin-top: 64px;
+}
+.step__icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    margin-right: 64px;
+}
+
+.step__icon img {
+    display: block;
+    width: 100%;
 }
