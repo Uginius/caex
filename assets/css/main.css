@@ -1331,10 +1331,6 @@ section.bg-teal {
 /*--------------------------------------------------------------
 # On Focus Section
 --------------------------------------------------------------*/
-.onfocus {
-    padding: 0;
-}
-
 .onfocus .video-play {
     min-height: 400px;
     background: linear-gradient(rgba(var(--color-black-rgb), 0.4), rgba(var(--color-black-rgb), 0.7)), url("../img/onfocus-video-bg.jpg") center center;
@@ -3220,6 +3216,12 @@ section.bg-teal {
     margin: 32px auto;
 }
 
+@media (max-width: 991px) {
+    .how-to__list {
+        flex-direction: column;
+    }
+}
+
 .how-to__list {
     counter-reset: how-to;
     display: flex;
@@ -3231,25 +3233,38 @@ section.bg-teal {
 
 .how-to__step {
     position: relative;
-    width: 30%;
+    width: 70%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .how-to__image {
     display: block;
     width: 64px;
-    margin-right: 24px;
+    margin: 0 24px;
 }
 
-.how-to__step::after {
+.how-to__step::before {
     counter-increment: how-to;
     content: counter(how-to);
-    position: absolute;
-    left: 50%;
-    bottom: 100%;
-    transform: translateX(-50%);
     font-size: 72px;
+}
+
+
+@media (min-width: 992px) {
+    .how-to__step {
+        width: 30%;
+            align-items: flex-start;
+    }
+    .how-to__step::before {
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translateX(-50%);
+    }
+    .how-to__image {
+        margin-left: 0;
+    }
 }
 
 .partners {
