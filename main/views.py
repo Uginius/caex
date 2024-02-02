@@ -57,8 +57,8 @@ def index(request):
                 'icon': 'steps-icon-2.svg'
             },
             {
-                'title': 'Virtual Prepaid Card With Immediate Activation',
-                'caption': 'Clients are given a prepaid card for some initial expenses to help them get settled and begin their life in the US (Groceries, transportation, hotel, etc.)',
+                'title': 'Virtual Prepaid Card with Immediate Activation',
+                'caption': 'Clients are given a prepaid card for some initial expenses to help them get settled and begin their life in the US (groceries, transportation, hotel, etc.)',
                 'icon': 'steps-icon-3.png'
             },
             {
