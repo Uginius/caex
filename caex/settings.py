@@ -14,7 +14,7 @@ from pathlib import Path
 
 from django.urls import reverse_lazy
 
-from caex.creds import caex_db
+from caex.creds import caex_db, sk
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j1rsy8d5=3gd+@y96(msbq9ewjwrg5hs$rp79)a3ed6d=k%*tc'
+SECRET_KEY = sk
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['85.193.90.163', '127.0.0.1']
 
