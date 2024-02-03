@@ -29,7 +29,7 @@ SECRET_KEY = sk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['85.193.90.163', '127.0.0.1']
+ALLOWED_HOSTS = ['85.193.90.163', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
