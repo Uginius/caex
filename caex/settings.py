@@ -14,7 +14,12 @@ from pathlib import Path
 
 from django.urls import reverse_lazy
 
-from caex.creds import caex_db, sk
+import dj_database_url
+from environs import Env
+
+
+env = Env()
+env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,13 +29,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = sk
+SECRET_KEY = env('SECRET_KEY', '123')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env.bool('DEBUG', True)
 
-ALLOWED_HOSTS = ['85.193.90.163', '127.0.0.1', '0.0.0.0']
-
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', ['127.0.0.1', 'localhost'])
 
 # Application definition
 
@@ -83,9 +87,11 @@ WSGI_APPLICATION = 'caex.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': caex_db
+    'default': dj_database_url.parse(
+        env('POSTGRES_URL'),
+        conn_max_age=600,
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
