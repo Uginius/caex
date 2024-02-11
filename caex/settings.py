@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'faq.apps.FaqConfig',
     'easycrypto.apps.EasycryptoConfig',
     'contacts.apps.ContactsConfig',
+    'content.apps.ContentConfig'
 ]
 
 MIDDLEWARE = [

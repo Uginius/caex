@@ -22,28 +22,31 @@
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services" data-aos="fade-up">
         <div class="container">
-            <div class="row justify-content-around gy-4">
-                {% for item in cryptoServices %}
-                    <div class="col-xl-3 col-md-6 d-flex">
-                        <div class="service-item position-relative">
-                            <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
-                            <h4>{% autoescape off %} {{ item.title }} {% endautoescape %}</h4>
-                            <p>{% autoescape off %} {{ item.caption }} {% endautoescape %}</p>
-                        </div>
-                    </div><!-- End Service Item -->
-                {% endfor %}
-            </div>
-            <div class="row  justify-content-around  gy-4">
-                {% for item in bankServices %}
-                    <div class="col-xl-3 col-md-6 d-flex">
-                        <div class="service-item position-relative">
-                            <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
-                            <h4>{% autoescape off %} {{ item.title }} {% endautoescape %}</h4>
-                            <p>{% autoescape off %} {{ item.caption }} {% endautoescape %}</p>
-                        </div>
-                    </div><!-- End Service Item -->
-                {% endfor %}
-            </div>
+            {% autoescape off %}
+                <div class="row justify-content-around gy-4">
+                    {% for item in cryptoServices %}
+                        <div class="col-xl-3 col-md-6 d-flex">
+                            <div class="service-item position-relative">
+                                <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
+                                <h4> {{ item.title }} </h4>
+                                {% if item.caption %} <p>{{ item.caption }}</p> {% endif %}
+                            </div>
+                        </div><!-- End Service Item -->
+                    {% endfor %}
+                </div>
+                <div class="row  justify-content-around  gy-4">
+                    {% for item in bankServices %}
+                        <div class="col-xl-3 col-md-6 d-flex">
+                            <div class="service-item position-relative">
+                                <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
+                                <h4> {{ item.title }} </h4>
+                                {% if item.caption %} <p>{{ item.caption }}</p> {% endif %}
+                            </div>
+                        </div><!-- End Service Item -->
+                    {% endfor %}
+                </div>
+            {% endautoescape %}
+
         </div>
     </section><!-- End Featured Services Section -->
     <section class="steps">
@@ -66,11 +69,8 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <br>
-            <br>
-            <div class="text-bg-success p-3">On average, adults in the US use the same primary checking account for more
-                than 17 years.
-            </div>
+            <br> <br>
+            <div class="text-bg-success p-3">{{ adult17 }}</div>
         </div>
     </section>
     <section id="onfocus" class="onfocus">
@@ -79,18 +79,8 @@
             <div class="row g-0">
                 <div class="col-lg-12">
                     <div class="content d-flex flex-column justify-content-center h-100">
-                        <h2>CAEX today</h2>
-                        <p class="fst-italic">
-                            Cryptocurrency exchange service that focuses on immigrants who have recently arrived in USA
-                        </p>
-                        <ul>
-                            <li><i class="bi bi-check-circle"></i>5000 Clients</li>
-                            <li><i class="bi bi-check-circle"></i>Offices in Los Angeles (California)</li>
-                            <li><i class="bi bi-check-circle"></i>24/7 Customer Support</li>
-                            <li><i class="bi bi-check-circle"></i>Hundreds of positive reviews</li>
-                            <li><i class="bi bi-check-circle"></i>Money Service Business Registration with FinCEN</li>
-                            <li><i class="bi bi-check-circle"></i>AML/KYC Procedures Implemented</li>
-                        </ul>
+                        <h2>{{ caex_today.title }}</h2>
+                        {% autoescape off %} {{ caex_today.text }} {% endautoescape %}
                         <a href="{% url 'register' %}" class="read-more align-self-start"><span>Sign Me Up</span></a>
                     </div>
                 </div>
@@ -99,9 +89,4 @@
         </div>
     </section><!-- End On Focus Section -->
 
-
-
 {% endblock %}
-
-
-

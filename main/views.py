@@ -5,73 +5,22 @@ from django.http import HttpRequest
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, TemplateView
-
+from content.models import Txt, Titles
 from main.forms import UserRegisterForm
-from main.models import Profile
+from main.models import Profile, CoinService, Step
 
 
 def index(request):
+    mm = Txt.objects.get(tag='main')
     context = {
-        'title': 'First step in the USA financial system',
-        'caption': 'CAEX empowers newcomer<br/> finance in the USA.',
-        'cryptoServices': [
-            {
-                'title': 'Cryptocurrency wallet',
-                'caption': '',
-                'icon': 'icon-cryptowallet.png',
-            },
-            {
-                'title': 'Cryptocurrency exchange',
-                'caption': '',
-                'icon': 'icon-wallet.png',
-            },
-        ],
-        'bankServices': [
-            {
-                'title': 'Foreign currency exchange',
-                'caption': '',
-                'icon': 'icon-banknotes.png',
-            },
-            {
-                'title': 'Bank account',
-                'caption': 'powered&nbsp;by Neobank&nbsp;solutions.<br/>Starting Q3&nbsp;2024',
-                'icon': 'icon-monitor.png',
-            },
-            {
-                'title': 'Money transfer',
-                'caption': 'starting Q3&nbsp;2024',
-                'icon': 'icon-money-cloud.png',
-
-            }
-        ],
-        'step_title': 'CAEX focuses on immigrants who have recently arrived in USA',
-        'steps': [
-            {
-                'title': 'New Client',
-                'caption': 'For those who just arrived in the country and do not yet have a bank account',
-                'icon': 'steps-icon-1.png'
-            },
-            {
-                'title': 'Currency Exchange',
-                'caption': 'Client receives first sum of USD in the USA provided that they have assets in a different country (fiat, crypto)',
-                'icon': 'steps-icon-2.svg'
-            },
-            {
-                'title': 'Virtual Prepaid Card with Immediate Activation',
-                'caption': 'Clients are given a prepaid card for some initial expenses to help them get settled and begin their life in the US (groceries, transportation, hotel, etc.)',
-                'icon': 'steps-icon-3.png'
-            },
-            {
-                'title': 'Neo Bank Account',
-                'caption': 'Clients are provided with account set up assistance for rent, car payments, insurance, etc. (Most newcomers only use one bank account in their first year in the US)',
-                'icon': 'steps-icon-4.png'
-            },
-            {
-                'title': 'Long-Term Client',
-                'caption': 'Clients will also have the possibility to set up savings accounts, credit accounts, or business accounts, and be able to transfer money to relatives in a different country',
-                'icon': 'steps-icon-5.png'
-            },
-        ]
+        'title': mm.title,
+        'caption': mm.text,
+        'cryptoServices': CoinService.objects.filter(is_banking=False),
+        'bankServices': CoinService.objects.filter(is_banking=True),
+        'step_title': Titles.objects.filter(tag='step_title')[0].title,
+        'steps': Step.objects.all(),
+        'adult17': Titles.objects.filter(tag='adult17')[0].title,
+        'caex_today': Txt.objects.filter(tag='caex_today')[0],
     }
     return render(request, template_name='main/main.html', context=context)
 
