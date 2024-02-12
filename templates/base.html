@@ -5,7 +5,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %} CAEX, since august 2023 {% endblock %}</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3GXEKCYR3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-S3GXEKCYR3');
+    </script>
+
+    <title>{% block title %} CAEX - Crypto Financial Service {% endblock %}</title>
 
     <link type="image/x-icon" href="{% static 'favicon.ico' %}" rel="shortcut icon">
     <link type="Image/x-icon" href="{% static 'favicon.ico' %}" rel="icon">
