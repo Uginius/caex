@@ -23,17 +23,6 @@
     <section id="featured-services" class="featured-services" data-aos="fade-up">
         <div class="container">
             {% autoescape off %}
-                <div class="row justify-content-around gy-4">
-                    {% for item in cryptoServices %}
-                        <div class="col-xl-3 col-md-6 d-flex">
-                            <div class="service-item position-relative">
-                                <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
-                                <h4> {{ item.title }} </h4>
-                                {% if item.caption %} <p>{{ item.caption }}</p> {% endif %}
-                            </div>
-                        </div><!-- End Service Item -->
-                    {% endfor %}
-                </div>
                 <div class="row  justify-content-around  gy-4">
                     {% for item in bankServices %}
                         <div class="col-xl-3 col-md-6 d-flex">
