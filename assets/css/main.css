@@ -3232,7 +3232,6 @@ section.bg-teal {
 .footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: rgba(var(--color-white-rgb), 0.1);
     color: var(--color-white);
     line-height: 1;
     padding: 8px 0;
