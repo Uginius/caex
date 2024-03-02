@@ -3072,11 +3072,13 @@ section.bg-teal {
 .footer .footer-content {
     height: 549px;
     background: #05107C;
-/*    padding: 60px 0 30px 0;*/
+    padding: 60px 0 30px 0;
 }
 
 .footer .footer-content .footer-info {
     margin-bottom: 30px;
+    flex-direction: row;
+    font-size: 18px;
 }
 
 .footer .footer-content .footer-info h3 {
@@ -3093,8 +3095,8 @@ section.bg-teal {
 }
 
 .footer .footer-content .footer-info p {
-    font-size: 14px;
-    line-height: 24px;
+/*    font-size: 14px;*/
+    line-height: 31px;
     margin-bottom: 0;
     font-family: var(--font-primary);
     color: var(--color-white);
@@ -3104,9 +3106,10 @@ section.bg-teal {
     width: 152px;
     height: 40px;
     padding-left: 0px;
-/*    display: block;*/
+    display: block;
 /*    width: 160px;*/
-/*    margin-bottom: 32px;*/
+    margin-bottom: 70px;
+    margin-top: 20px;
 }
 
 .footer .footer-content h4 {
@@ -3131,7 +3134,9 @@ section.bg-teal {
 }
 
 .footer .footer-content .footer-links {
-    margin-bottom: 30px;
+    margin-bottom: 81px;
+    margin-right: 25px;
+    padding-top: 8px;
 }
 
 .footer .footer-content .footer-links ul {
@@ -3148,7 +3153,7 @@ section.bg-teal {
 }
 
 .footer .footer-content .footer-links ul li {
-    padding: 10px 0;
+    padding: 7px 0;
     display: flex;
     align-items: center;
 }
@@ -3220,6 +3225,10 @@ section.bg-teal {
     color: var(--color-primary-light);
 }
 
+.footer .social-links {
+    margin-right: 9px;
+}
+
 .footer .social-links a {
     font-size: 18px;
     display: inline-block;
@@ -3240,7 +3249,35 @@ section.bg-teal {
     text-decoration: none;
 }
 
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 210px;
+  height: 88px;
+  flex: auto;
+}
 
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 210px;
+  height: 88px;
+  flex: auto;
+  line-height: 30px;
+}
+
+.footer-strong {
+  width: 292px;
+  height: 60px;
+  margin-top: 55px;
+  font-size: 16px;
+}
 .advantages {
     max-width: 800px;
 }
