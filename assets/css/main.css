@@ -106,7 +106,7 @@ section.bg-teal {
 }
 
 .very-main-content section:first-child {
-    padding-top: 120px;
+    padding-top: 169px;
 }
 
 .section-header {
@@ -611,8 +611,8 @@ section.bg-teal {
 .hero-animated {
     width: 100%;
     min-height: 50vh;
-    background: #3b5380;
-    background-size: cover;
+/*    background: #3b5380;*/
+/*    background-size: cover;*/
     position: relative;
     padding: 120px 0 60px;
 }
@@ -3404,4 +3404,96 @@ section.bg-teal {
   top: 32px;
   background: #ECECEC;
   border-radius: 12px;
+}
+
+.hero-animated .main-banner {
+  background-image: url("../../media/img/banner-image.png");
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  width: 930px;
+  height: 415px;
+  left: calc(50% - 930px/2);
+  top: 170px;
+}
+
+.hero-animated .main-banner .left {
+    display: flex;
+    flex-direction: column;
+    flex: 65%;
+    flex-shrink: 0;
+}
+
+.hero-animated .main-banner .right {
+    flex: auto;
+}
+
+.hero-animated .main-banner .right .img {
+    margin-top: 15px;
+    margin-left: -30px;
+}
+
+
+.hero-animated .main-banner .left .b-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 10px;
+/*    width: 870px;*/
+    height: 63px;
+    left: 30px;
+    bottom: 30px;
+    background: #05107C;
+    border-radius: 12px;
+    margin-top: auto;
+    margin-bottom: 29px;
+    margin-left: 17px;
+}
+
+.hero-animated .main-banner .left .b-button .textarea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 90px;
+  height: 24px;
+  color: white;
+} 
+
+.hero-animated .main-banner .left .title {
+/*    width: 533px;*/
+    height: 128px;
+    left: 30px;
+    top: 30px;
+
+    padding: 61px 0px 0px 17px ;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    /* or 133% */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.hero-animated .main-banner .left .caption {
+    padding: 60px 17px ; 
+/*    width: 437px;*/
+    height: 26px;
+    left: 30px;
+    top: 178px;
+
+    font-family: Suisse Int'l';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+/* identical to box height */
+
+    color: #FFFFFF;
 }

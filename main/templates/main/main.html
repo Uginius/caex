@@ -3,18 +3,25 @@
 {% block content %}
 
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
-        <div class="container">
-            <br><br>
-            <h1>
-                {{ title }}
-            </h1>
-            <div class="row mt-5">
-                <div class="col-12 col-lg-9">
-                    <p>{% autoescape off %}{{ caption }}{% endautoescape %}</p>
+        <div class="container main-banner">
+            <div class="left">
+                <div class="title">
+                    {{ title }}
                 </div>
-                <div class="col-12 col-lg-3">
-                    <a href="{% url 'register' %}" class="btn btn-primary btn-get-started mx-auto">Sign Me Up</a>
+                <div class="caption">
+                    {{ caption }}
                 </div>
+                <a href="{% url 'register' %}" class="b-button">
+                    <b class="textarea">Sign Me Up</b>
+                    <div class="icon" style="height: 26px;"><img src='media/img/sign-me-icon.png'></div>
+                </a>                
+            </div>
+            
+            <div class="right">
+                <div class="img">
+                    <img src="media/img/cards.png">
+                </div>
+
             </div>
 
         </div>
