@@ -614,7 +614,7 @@ section.bg-teal {
 /*    background: #3b5380;*/
 /*    background-size: cover;*/
     position: relative;
-    padding: 120px 0 60px;
+    padding: 120px 0 0;
 }
 
 .hero-animated h1 {
@@ -1114,11 +1114,27 @@ section.bg-teal {
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services .service-item {
-    padding: 30px;
+/*    padding: 30px;*/
     transition: all ease-in-out 0.4s;
-    height: 100%;
-    text-align: center;
-    width: 100%;
+/*    height: 100%;*/
+    text-align: start;
+/*    width: 100%;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 16px;
+    gap: 5px;
+
+    width: 218px;
+    height: 154px;
+
+    background: #F4F4F4;
+    border-radius: 10px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .featured-services .service-item .icon {
@@ -1135,7 +1151,8 @@ section.bg-teal {
 
 .featured-services .service-item .icon img {
     display: block;
-    height: 36px;
+    width: 24px;
+    height: 24px;
 }
 
 .featured-services .service-item h4 {
@@ -3497,3 +3514,5 @@ section.bg-teal {
 
     color: #FFFFFF;
 }
+
+.featured-services .item
