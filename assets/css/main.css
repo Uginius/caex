@@ -1392,6 +1392,7 @@ section.bg-teal {
 }
 
 .onfocus {
+
 }
 
 @media (min-width: 768px) {
@@ -3086,6 +3087,7 @@ section.bg-teal {
 .footer {
     color: var(--color-white);
     font-size: 14px;
+    margin-top: 20px;
 }
 
 .footer .footer-content {
@@ -3705,4 +3707,161 @@ flex-grow: 0;
 /* identical to box height */
 
     color: #FFFFFF;
+}
+
+.bottom-banner {
+    width: 930px;
+    height: 459px;
+    left: calc(50% - 930px/2);
+    top: 1479px;
+
+    background: #F4F4F4;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    margin-top: -39px;
+}
+
+.bottom-banner .image {
+    width: 475px;
+    height: 459px;
+    left: 0px;
+    top: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.bottom-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-info .title {
+    /* CAEX today */
+
+    width: 339px;
+    height: 32px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    /* identical to box height, or 100% */
+    text-transform: uppercase;
+
+    color: #1A1F24;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    display: flex;
+    margin: 31px 0px 0px 32px;
+}
+
+.bottom-info .caption {
+    display: flex;
+    margin: 17px 0 0px 32px;
+}
+
+.bottom-info .text {
+    width: 339px;
+    height: 48px;
+
+    font-family: 'Suisse Intl';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #1A1F24;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.bottom-info .list-icon {
+    /* Frame */
+    width: 24px;
+    height: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background-image: url("../../media/img/bottom-icon.png") ;
+
+}
+
+.bottom-info ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.bottom-info ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 450px;
+    height: 24px;
+
+    /* Inside auto layout */
+    flex: 1;
+    order: 1;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.bottom-info .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 10px;
+
+    width: 181px;
+    height: 40px;
+    left: 507px;
+    bottom: 32px;
+
+    background: #286DEB;
+    border-radius: 8px;
+    margin: auto 0px 32px 32px;
+}
+
+.bottom-info .button .textarea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 90px;
+    height: 24px;
+    color: white;
+}
+
+
+.bottom-banner .button .icon {
+    /* Vector 3 */
+
+width: 12px;
+height: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
 }

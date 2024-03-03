@@ -78,18 +78,29 @@
         </div>
     </section>
     <section id="onfocus" class="onfocus">
-        <div class="container" data-aos="fade-up">
+        <div class="container" style="padding: 0" data-aos="fade-up">
 
-            <div class="row g-0">
-                <div class="col-lg-12">
-                    <div class="content d-flex flex-column justify-content-center h-100">
-                        <h2>{{ caex_today.title }}</h2>
-                        {% autoescape off %} {{ caex_today.text }} {% endautoescape %}
-                        <a href="{% url 'register' %}" class="read-more align-self-start"><span>Sign Me Up</span></a>
+            <div class="bottom-banner">
+                <img class="image" src="media/img/international.png">
+                <div class="bottom-info">
+                    <div class="title">{{ caex_today.title }}</div>
+                    <div class="caption">{% autoescape off %} {{ caex_today.text }} {% endautoescape %}</div>
+                    <div>
+                        <ul>
+                            <li><i class="list-icon"></i>5000 Clients</li>
+                            <li><i class="list-icon"></i>Offices in Los Angeles (California)</li>
+                            <li><i class="list-icon"></i>24/7 Customer Support</li>
+                            <li><i class="list-icon"></i>Hundreds of positive reviews</li>
+                            <li><i class="list-icon"></i>Money Service Business Registration with FinCEN</li>
+                            <li><i class="list-icon"></i>AML/KYC Procedures Implemented</li>
+                        </ul>
                     </div>
+                    <a href="{% url 'register' %}" class="button">
+                        <b class="textarea">Sign Me Up</b>
+                        <div class="icon" style="height: 26px;"><img src='media/img/sign-me-icon.png'></div>
+                    </a>
                 </div>
             </div>
-
         </div>
     </section><!-- End On Focus Section -->
 
