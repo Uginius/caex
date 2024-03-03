@@ -19,7 +19,7 @@
             
             <div class="right">
                 <div class="img">
-                    <img src="media/img/">
+                    <img src="media/img/cards.png">
                 </div>
 
             </div>
@@ -46,28 +46,36 @@
 
         </div>
     </section><!-- End Featured Services Section -->
-    <section class="steps">
-        <div class="container">
-            <h2>{{ step_title }}</h2>
-            <h2><br/></h2>
-            <div>
+    <section id="steps" class="s-steps">
+        <div class="container steps">
+            <div class="preview">
+                <b>{{ step_title }}</b>
+                
+                <div class="time">
+                    <div class="icon"><img src="media/img/clock.png"></div>
+                    <p>On average, adults in the US use the same primary checking account for more than 17 years.</p>
+                </div>
+            </div>
+            
+            <div class="items">
                 {% for item in steps %}
-                    <div class="step__item">
-                        <div class="step__icon">
-                            <img src="/media/img/{{ item.icon }}" alt=""/>
+                    <div class="item">
+                        <div class="order">
+                            0{{ item.order }}
                         </div>
-                        <div class="step__text">
-                            <h3>{{ item.title }}</h3>
+                        <div class="step-icon"><img src="media/img/steps-icon.png"></div>
+                        <div class="text">
+                            <b>{{ item.title }}</b>
                             <p>{{ item.caption }}</p>
                         </div>
                     </div>
-                    {% if not forloop.last %}
+                    <!-- {% if not forloop.last %}
                         <h3 class="ms-5 mt-1 text-primary"><p>↓</p></h3>
-                    {% endif %}
+                    {% endif %} -->
                 {% endfor %}
             </div>
             <br> <br>
-            {% autoescape off %}
+       <!--      {% autoescape off %}
                 <div class="row mt-5 text-bg-success p-3">
                     <div class="col-12 col-lg-1">
                         <div class="mt-3">
@@ -78,7 +86,7 @@
                         <h3>{{ adult17 }}</h3>
                     </div>
                 </div>
-            {% endautoescape %}
+            {% endautoescape %} -->
         </div>
     </section>
     <section id="onfocus" class="onfocus">

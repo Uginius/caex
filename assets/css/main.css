@@ -100,6 +100,10 @@ section {
     overflow: hidden;
 }
 
+section.s-steps {
+    padding-top: 20px;
+}
+
 section.bg-teal {
     /* primary with opacity */
     background-color: rgba(13, 110, 253, 0.2) !important;
@@ -3386,16 +3390,175 @@ section.bg-teal {
 
 
 .steps {
-    background: rgba(var(--color-secondary-rgb), 0.2);
+/*    background: rgba(var(--color-secondary-rgb), 0.2);*/
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
 }
 
-.step__item {
+.steps .preview {
+    display: flex;
+    flex-direction: column;
+    flex: 45%;
+}
+
+.steps .preview b {
+ width: 376px;
+height: 160px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+/* or 125% */
+text-transform: uppercase;
+color: #232425;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.steps .preview .time {
+    width: 376px;
+    height: 320px;
+
+    background: #F4F4F4;
+    border-radius: 10px;
+
+/* Inside auto layout */
+    flex: none;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 39px;
+}
+
+.steps .preview .time .icon {
+    display: flex;
+    margin-top: 60px;
+}
+
+.steps .preview .time p {
+    display: flex;
+    width: 318px;
+    height: 84px;
+    left: calc(50% - 318px/2);
+    top: 164px;
+    margin-top: 41px;
+
+/*    font-family: 'Suisse Int'l';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+/* or 140% */
+    text-align: center;
+
+/* blue */
+    color: #286DEB;
+}
+
+.steps .items {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    justify-content: space-between;
+}
+
+.steps .items .item {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 4px;
 }
 
-.step__item:not(:first-child) {
+/*.step__item:not(:first-child) {
     margin-top: 64px;
+}*/
+
+.steps .items .item .order {
+/*position: absolute;*/
+    width: 17px;
+    height: 16px;
+    left: 0px;
+    top: 9px;
+
+/*font-family: 'Suisse Int'l';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #1A1F24;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.steps .items .item .text {
+    padding-left: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    width: 433px;
+/*    height: 76px;*/
+
+
+/* Inside auto layout */
+    flex: 1;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.steps .items .item .text b {
+    width: 433px;
+    height: 32px;
+    /*font-family: 'Suisse Int'l';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    color: #2B70EF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+}
+
+.steps .items .item .text p {
+    /* For those who just arrived in the country and do not yet have a bank account */
+
+    width: 433px;
+    height: 40px;
+
+    font-family: 'Suisse Intl';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+/* or 143% */
+    display: flex;
+    align-items: center;
+
+    color: #1A1F24;
+    /* Inside auto layout */
+    flex: 1;
+    order: 1;
+    align-self: stretch;
+}
+
+.steps .items .item .step-icon {
+    width: 8px;
+    height: 8px;
+    left: 33px;
+    top: 13px;
+    margin-left: 14px;
+    margin-top: 3px;
+    background: #FFFFFF;
 }
 
 .step__icon {
@@ -3514,5 +3677,3 @@ section.bg-teal {
 
     color: #FFFFFF;
 }
-
-.featured-services .item
