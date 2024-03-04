@@ -3701,9 +3701,10 @@ flex-grow: 0;
     flex: auto;
 }
 
-.hero-animated .main-banner .right .img {
-    margin-top: 15px;
-    margin-left: -30px;
+.hero-animated .main-banner .right img {
+    height: 415px;
+    width: 350px;border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 
@@ -3720,9 +3721,7 @@ flex-grow: 0;
     bottom: 30px;
     background: #05107C;
     border-radius: 12px;
-    margin-top: auto;
-    margin-bottom: 29px;
-    margin-left: 17px;
+    margin: auto 26px 29px 17px;
 }
 
 .hero-animated .main-banner .left .b-button .textarea {
