@@ -3987,3 +3987,190 @@ flex-grow: 0;
     width: 40px;
     height: 40px;
 }
+
+.buy-steps {
+/*    background: rgba(var(--color-secondary-rgb), 0.2);*/
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    height: 215px;
+}
+
+.buy-steps .preview {
+    display: flex;
+    flex-direction: column;
+    flex: 45%;
+}
+
+.buy-steps .preview b {
+    width: 376px;
+    height: 160px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    /* or 125% */
+    text-transform: uppercase;
+    color: #232425;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.buy-steps .preview .time {
+    width: 376px;
+    height: 320px;
+
+    background: #F4F4F4;
+    border-radius: 10px;
+
+/* Inside auto layout */
+    flex: none;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 39px;
+}
+
+.buy-steps .preview .time .icon {
+    display: flex;
+    margin-top: 60px;
+}
+
+.buy-steps .preview .time p {
+    display: flex;
+    width: 318px;
+    height: 84px;
+    left: calc(50% - 318px/2);
+    top: 164px;
+    margin-top: 41px;
+
+/*    font-family: 'Suisse Int'l';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+/* or 140% */
+    text-align: center;
+
+/* blue */
+    color: #286DEB;
+}
+
+.buy-steps .items {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    justify-content: space-between;
+}
+
+.buy-steps .items .item {
+    display: flex;
+    align-items: flex-start;
+/*    margin-bottom: 4px;*/
+    flex-grow: 1;
+}
+
+.buy-steps .items .item:not(:first-child) {
+    flex-grow: 2;
+}
+
+.buy-steps .items .item .order {
+/*position: absolute;*/
+    width: 17px;
+    height: 16px;
+    left: 0px;
+    top: 9px;
+
+/*font-family: 'Suisse Int'l';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #1A1F24;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.buy-steps .items .item .text {
+    padding-left: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    width: 433px;
+    flex: 1;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.buy-steps .items .item .text b {
+    width: 433px;
+    height: 32px;
+    /*font-family: 'Suisse Int'l';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    color: #2B70EF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+}
+
+
+.buy-steps .items .item .line {
+    display: flex;
+    flex-direction: column;
+    left: 33px;
+    top: 13px;
+    margin-left: 15px;
+/*    margin-top: 3px;*/
+    background: #FFFFFF;
+    height: 100%;
+}
+
+.buy-steps .items .item .line img {
+/*    position: absolute;*/
+    width: 10px;
+    height: 10px;
+    left: 33px;
+    top: 109px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+}
+
+.buy-steps .items .item .step-line {
+    /* Vector */
+    display: flex;
+    width: 0px;
+    height: 100%;
+    left: 37px;
+    top: 4px;
+    border: 1px solid #2A6FEE;
+    margin-left: 4px;
+}
+
+.buy-steps .items .item .step-line:nth-child(1) {
+    height: 15px;
+}
+
+.buy-steps .items .item .last-line {
+    /* Vector */
+    display: flex;
+    width: 0px;
+    height: 45%;
+    left: 37px;
+    top: 4px;
+    border: 1px solid #2A6FEE;
+    margin-left: 4px;
+}
