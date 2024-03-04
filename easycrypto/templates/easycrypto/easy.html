@@ -1,28 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <section class="bg-teal">
-        <div class="container">
+    <section class="expertises">
+        <div class="container" style="padding-left: 0px;">
             <h1 class="section-header">{% autoescape off %} {{ title }} {% endautoescape %}</h1>
-            <div class="row mx-auto gy-4 advantages featured-services">
+
+            {% autoescape off %}
+            <div class="row  justify-content-between  gy-4" style="margin: 37px -12px 0 0;">
                 {% for expertise in trusted %}
-                    <div class="col-lg-6 col-12 d-flex">
-                        <div class="service-item flex-grow-1 text-center">
-                            <div class="icon"><img src="/media/img/easy_crypto/{{ expertise.image }}"></div>
-                            <h4>{{ expertise.title }}</h4>
-                            <p>{{ expertise.text }}</p>
-                        </div>
+                    <div class="service-item position-relative">
+                        <div class="icon"><img src="../media/img/easy_crypto/{{ expertise.image }}" alt=""/></div>
+                        <b> {{ expertise.title }} </b>
+                        {% if expertise.text %} 
+                          <p style="color: #1A1F24;opacity: 0.5;">{{ expertise.text }}</p>
+                        {% endif %}
                     </div>
+                <!-- End Service Item -->
                 {% endfor %}
             </div>
-        </div>
+            {% endautoescape %}
     </section>
     <section>
         <div class="payment-methods container">
-            <h2 class="h1 section-header">Payment methods & Interest rates</h2>
+            <p>Payment methods & Interest rates</p>
             <img class="payment-methods__schema" src="/media/img/easy_crypto/payment_methods.svg" alt=""/>
-            <p>CRYPTO* — BITCOIN, ETHEREUM, USDT (STABLECOINS)<br/>
-                BLOCKCHAIN TRANSACTION** - PAYMENT VIA SELECTED BLOCKCHAIN</p>
+           <!--  <p>CRYPTO* — BITCOIN, ETHEREUM, USDT (STABLECOINS)<br/>
+                BLOCKCHAIN TRANSACTION** - PAYMENT VIA SELECTED BLOCKCHAIN</p> -->
         </div>
     </section>
     <section class="how-to bg-teal">
