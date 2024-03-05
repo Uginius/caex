@@ -81,7 +81,10 @@
                 <img class="image" src="media/img/caex-team.jpg">
                 <div class="bottom-info">
                     <div class="title">{{ caex_today.title }}</div>
-                    <div class="caption">{% autoescape off %} {{ caex_today.text }} {% endautoescape %}</div>
+                    <div class="caption">{% autoescape off %} 
+                        <p>{{ caex_today.text }}</p>
+                         {% endautoescape %}
+                    </div>
                     <div>
                         <ul>
                             <li><i class="list-icon"></i>5000 Clients</li>
