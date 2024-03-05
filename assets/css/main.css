@@ -3786,7 +3786,7 @@ flex-grow: 0;
 }
 
 .bottom-banner .image {
-    width: 475px;
+    width: 360px;
     height: 459px;
     left: 0px;
     top: 0px;
@@ -3797,6 +3797,7 @@ flex-grow: 0;
 .bottom-info {
     display: flex;
     flex-direction: column;
+    width: 500px;
 }
 
 .bottom-info .title {
