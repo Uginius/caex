@@ -6,22 +6,25 @@
         <div class="container main-banner">
             <div class="left">
                 <div class="title">
+
                     {{ title }}
                 </div>
                 <div class="caption">
-                    {{ caption }}
+{#                    <div class="caption">{% autoescape off %}#}
+                        {{ caption }}
+{#                    {% endautoescape %}#}
+                    </div>
+                    <a href="{% url 'register' %}" class="b-button">
+                        <b class="textarea">Sign Me Up</b>
+                        <div class="icon" style="height: 26px;"><img src='media/img/sign-me-icon.png'></div>
+                    </a>
                 </div>
-                <a href="{% url 'register' %}" class="b-button">
-                    <b class="textarea">Sign Me Up</b>
-                    <div class="icon" style="height: 26px;"><img src='media/img/sign-me-icon.png'></div>
-                </a>                
-            </div>
-            
-            <div class="right">
-                    <img src="media/img/cards.png">
-            </div>
 
-        </div>
+                <div class="right">
+                    <img src="media/img/cards2.png">
+                </div>
+
+            </div>
     </section>
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services" data-aos="fade-up">
@@ -34,7 +37,7 @@
                                 <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
                                 <b> {{ item.title }} </b>
                                 {% if item.caption %} <p
-                                style="color: #1A1F24;opacity: 0.5;">{{ item.caption }}</p> {% endif %}
+                                        style="color: #1A1F24;opacity: 0.5;">{{ item.caption }}</p> {% endif %}
                             </div>
                         </div><!-- End Service Item -->
                     {% endfor %}
@@ -47,13 +50,13 @@
         <div class="container steps">
             <div class="preview">
                 <b>{{ step_title }}</b>
-                
+
                 <div class="time">
                     <div class="icon"><img src="media/img/clock.png"></div>
                     <p>On average, adults in the US use the same primary checking account for more than 17 years.</p>
                 </div>
             </div>
-            
+
             <div class="items">
                 {% for item in steps %}
                     <div class="item">
@@ -81,19 +84,11 @@
                 <img class="image" src="media/img/caex-team.jpg">
                 <div class="bottom-info">
                     <div class="title">{{ caex_today.title }}</div>
-                    <div class="caption">{% autoescape off %} 
-                        <p>{{ caex_today.text }}</p>
-                         {% endautoescape %}
-                    </div>
-                    <div>
-                        <ul>
-                            <li><i class="list-icon"></i>5000 Clients</li>
-                            <li><i class="list-icon"></i>Offices in Los Angeles (California)</li>
-                            <li><i class="list-icon"></i>24/7 Customer Support</li>
-                            <li><i class="list-icon"></i>Hundreds of positive reviews</li>
-                            <li><i class="list-icon"></i>Money Service Business Registration with FinCEN</li>
-                            <li><i class="list-icon"></i>AML/KYC Procedures Implemented</li>
-                        </ul>
+                    <div class="caption">{% autoescape off %}
+                        <div>
+                            {{ caex_today.text }}
+                        </div>
+                    {% endautoescape %}
                     </div>
                     <a href="{% url 'register' %}" class="button">
                         <b class="textarea">Sign Me Up</b>
