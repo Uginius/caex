@@ -4,17 +4,17 @@
 
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
         <div class="container main-banner">
-            <div class="left">
-                <div class="title">
+            <div class="row left">
+                <div class="col title">
 
                     {{ title }}
                 </div>
-                <div class="caption">
+                <div class="col caption">
 {#                    <div class="caption">{% autoescape off %}#}
                         {{ caption }}
 {#                    {% endautoescape %}#}
                     </div>
-                    <a href="{% url 'register' %}" class="b-button">
+                    <a href="{% url 'register' %}" class="col-11 b-button">
                         <b class="textarea">Sign Me Up</b>
                         <div class="icon" style="height: 26px;"><img src='media/img/sign-me-icon.png'></div>
                     </a>
