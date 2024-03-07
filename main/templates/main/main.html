@@ -46,9 +46,9 @@
 
         </div>
     </section><!-- End Featured Services Section -->
-    <section id="steps" class="s-steps">
-        <div class="container steps">
-            <div class="preview">
+    <section id="steps" class="s-steps d-flex justify-content-center">
+        <div class="row container steps">
+            <div class="col preview">
                 <b>{{ step_title }}</b>
 
                 <div class="time">
@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="items">
+            <div class="items col">
                 {% for item in steps %}
                     <div class="item">
                         <div class="order">
@@ -74,6 +74,10 @@
                         </div>
                     </div>
                 {% endfor %}
+                <div class="time-mobile">
+                    <div class="icon"><img src="media/img/clock.png"></div>
+                    <p>On average, adults in the US use the same primary checking account for more than 17 years.</p>
+                </div>
             </div>
         </div>
     </section>
