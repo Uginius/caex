@@ -10,14 +10,17 @@
                 <li><a href="{% url 'faq' %}">FAQ</a></li>
                 <li><a href="{% url 'easy' %}">Buy/sell crypto</a></li>
                 <li><a href="{% url 'contacts' %}">Contacts</a></li>
+                <li><a class="login" href="{% url 'login' %}">Sign in</a></li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav>
-        {% if user.is_authenticated %}
-        <a class="btn-getstarted" href="{% url 'about-me' %}">{{ user.username }}</a>
-            {% else %}
-        <a class="btn-getstarted" href="{% url 'login' %}">Sign in</a>
-            {% endif %}
+        <div>
+            {% if user.is_authenticated %}
+            <a class="btn-getstarted" href="{% url 'about-me' %}">{{    user.username }}</a>
+                {% else %}
+            <a class="btn-getstarted" href="{% url 'login' %}">Sign in</a>
+                {% endif %}
+            <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        </div>
         <!-- .navbar -->
 
 

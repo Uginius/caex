@@ -302,9 +302,8 @@ section.bg-teal {
 
 @media (max-width: 1279px) {
 
-    .header .btn-getstarted,
-    .header .btn-getstarted:focus {
-        margin-right: 50px;
+    .header .btn-getstarted {
+        display: none;
     }
 }
 
@@ -491,6 +490,10 @@ section.bg-teal {
         left: 100%;
         visibility: visible;
     }
+
+    .navbar .login {
+        display: none;
+    }
 }
 
 @media (min-width: 1280px) and (max-width: 1366px) {
@@ -572,19 +575,25 @@ section.bg-teal {
 
     .mobile-nav-toggle {
         display: block !important;
-        color: var(--color-secondary);
+        color: var(--color-secondary); 
         font-size: 28px;
         cursor: pointer;
         line-height: 0;
         transition: 0.5s;
-        position: fixed;
+        margin-right: 10px;
+        /*position: fixed;
         top: 20px;
         z-index: 9999;
-        right: 20px;
+        right: 20px;*/
     }
 
     .mobile-nav-toggle.bi-x {
         color: var(--color-white);
+        position: fixed;
+        top: 20px;
+        z-index: 9999;
+        right: 20px;
+        margin-right: 0;
     }
 
     .mobile-nav-active {
@@ -3092,7 +3101,7 @@ section.bg-teal {
 }
 
 .footer .footer-content {
-    height: 549px;
+/*    height: 549px;*/
     background: #05107C;
     padding: 60px 0 30px 0;
 }
@@ -3276,8 +3285,6 @@ section.bg-teal {
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
-  width: 210px;
-  height: 88px;
   flex: auto;
 }
 
@@ -3288,17 +3295,36 @@ section.bg-teal {
   padding: 0px;
   gap: 8px;
   width: 210px;
-  height: 88px;
   flex: auto;
   line-height: 30px;
 }
 
 .footer-strong {
   width: 292px;
-  height: 60px;
   margin-top: 55px;
   font-size: 16px;
 }
+
+@media (max-width: 991px) {
+    .footer_mobile {
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    strong {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*End footer*/
+
+
 .advantages {
     max-width: 800px;
 }
@@ -3674,9 +3700,21 @@ flex-grow: 0;
   width: 930px;
   height: 78px;
   left: calc(50% - 930px/2);
-  top: 32px;
   background: #ECECEC;
   border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+    .main-menu {
+        position: initial;
+    }
+    .logo {
+        position: relative;
+    }
 }
 
 .hero-animated .main-banner {
