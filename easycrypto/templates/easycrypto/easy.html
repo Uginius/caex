@@ -6,7 +6,7 @@
             <h1 class="section-header">{% autoescape off %} {{ title }} {% endautoescape %}</h1>
 
             {% autoescape off %}
-            <div class="row  justify-content-between  gy-4" style="margin: 37px -12px 0 0;">
+            <div class="row  justify-content-around gy-4" style="margin: 37px -12px 0 0;">
                 {% for expertise in trusted %}
                     <div class="service-item position-relative">
                         <div class="icon"><img src="../media/img/easy_crypto/{{ expertise.image }}" alt=""/></div>

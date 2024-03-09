@@ -4228,6 +4228,17 @@ flex-grow: 0;
     height: 40px;
 }
 
+@media (max-width: 990px) {
+    .expertises h1 {
+        width: auto;
+        height: auto;
+        padding-bottom: 0;
+        margin-left: 15px;
+        text-align: center;
+        font-size: 32px;
+    }
+}
+
 .buy-steps {
 /*    background: rgba(var(--color-secondary-rgb), 0.2);*/
     display: flex;
