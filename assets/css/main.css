@@ -4539,3 +4539,20 @@ flex-grow: 0;
     position: relative;
     top: -16px;
 }
+
+@media (max-width: 990px) {
+    .steps-buysell {
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    .steps-buysell p {
+        width: auto;
+        height: auto;
+        font-size: 22px;
+        text-align: center;
+    }
+    .buysell-methods__schema {
+        margin: 0 8px 0 8px;
+    }
+}
