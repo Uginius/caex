@@ -3960,8 +3960,8 @@ flex-grow: 0;
 }
 
 .bottom-banner {
-    width: 930px;
-    height: 459px;
+    max-width: 930px;
+/*    height: 459px;*/
     left: calc(50% - 930px/2);
     top: 1479px;
 
@@ -3970,12 +3970,13 @@ flex-grow: 0;
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: -39px;
 }
 
 .bottom-banner .image {
-    width: 360px;
-    height: 459px;
+    max-width: 360px;
+    max-height: 459px;
     left: 0px;
     top: 0px;
     border-top-left-radius: 20px;
@@ -3985,13 +3986,15 @@ flex-grow: 0;
 .bottom-info {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 231px;
 }
 
 .bottom-info .title {
     /* CAEX today */
 
-    width: 339px;
+/*    width: 339px;*/
     height: 32px;
 
     font-family: 'Poppins';
@@ -4014,7 +4017,9 @@ flex-grow: 0;
 
 .bottom-info .caption {
     display: flex;
+    flex-direction: column;
     margin: 17px 0 0px 32px;
+    width: 100%;
 }
 
 .bottom-info .text {
@@ -4044,8 +4049,8 @@ flex-grow: 0;
     flex: none;
     order: 0;
     flex-grow: 0;
-    background-image: url("../../media/img/bottom-icon.png") ;
-
+    background-image: url("../../media/img/bottom-icon.png");
+    margin-top: 8px;
 }
 
 .bottom-info ul {
@@ -4057,12 +4062,13 @@ flex-grow: 0;
 .bottom-info ul li {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     padding: 0px;
     gap: 8px;
 
-    width: 450px;
-    height: 24px;
+    width: 80%;
+    max-width: 450px;
+/*    height: 24px;*/
 
     /* Inside auto layout */
     flex: 1;
@@ -4089,7 +4095,7 @@ flex-grow: 0;
 
     background: #286DEB;
     border-radius: 8px;
-    margin: auto 0px 32px 32px;
+    margin: auto 32px 32px 32px;
 }
 
 .bottom-info .button .textarea {
@@ -4114,7 +4120,29 @@ flex-grow: 0;
     flex-grow: 0;
 }
 
+@media (max-width: 990px) {
+    .bottom-banner {
+        justify-content: center;
+    }
+    .bottom-info {
+        order: -1;
+    }
+    .bottom-info .caption p {
+        width: 80%;
+    }
+    .bottom-info ul {
+        padding: 0;
+    }
+    .bottom-info .button {
+        align-self: center;
+    }
+    .bottom-banner .image {
+        border-radius: 20px;
 
+    }
+
+}
+/*=======================================================*/
 .expertises .service-item {
     transition: all ease-in-out 0.4s;
     text-align: start;

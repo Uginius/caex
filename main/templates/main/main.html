@@ -84,14 +84,14 @@
     <section id="onfocus" class="onfocus">
         <div class="container" style="padding: 0" data-aos="fade-up">
 
-            <div class="bottom-banner">
-                <img class="image" src="media/img/caex-team.jpg">
-                <div class="bottom-info">
+            <div class="row-p-0 bottom-banner">
+                <img class="col flex-grow-0 image" src="media/img/caex-team.jpg">
+                <div class="col bottom-info">
                     <div class="title">{{ caex_today.title }}</div>
                     <div class="caption">{% autoescape off %}
-                        <div>
+                        
                             {{ caex_today.text }}
-                        </div>
+                        
                     {% endautoescape %}
                     </div>
                     <a href="{% url 'register' %}" class="button">
