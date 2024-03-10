@@ -3323,6 +3323,7 @@ section.bg-teal {
     .footer .footer-logo {
         margin-top: 0;
         margin-bottom: 30px;
+        margin-left: -12px;
     }
 
     .footer_mobile {
@@ -3330,6 +3331,8 @@ section.bg-teal {
         align-items: self-start;
         margin-left: 10%;
         padding-left: 0;
+        margin-left: 0;
+        padding-left: 39px;
     }
 
     .footer-strong {
