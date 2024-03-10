@@ -68,7 +68,7 @@
                 <div class="col-12 col-lg-6 mt-5 mb-5 mt-lg-0 d-flex flex-column">
                     <h2>Feedback Form</h2>
                     <p class="caption">Curious minds make us better. Share your questions and ideas.</p>
-                    <form action="" method="post">
+                    <form style="max-width:441px;" action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit" class="btn btn-primary">Submit</button>

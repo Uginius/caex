@@ -4576,7 +4576,7 @@ flex-grow: 0;
 /*    max-height: 718px;*/
     border-radius: 20px;
     background-image: url("../../media/img/feedback-form.svg");
-    background-size: 100% 100%;
+    background-size: auto 100%;
 }
 
 .feedback-form h2 {
@@ -4593,7 +4593,7 @@ flex-grow: 0;
     display: flex;
     align-self: center;
 /*    position: absolute;*/
-    width: 150%;
+/*    width: 150%;*/
 /*    height: 32px;*/
 /*    left: calc(50% - 576px/2);*/
 /*    top: 108px;*/
@@ -4607,3 +4607,13 @@ flex-grow: 0;
     color: #1A1F24;
     }
 
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 441px;
+}
+
+.feedback-form p {
+    flex-direction: column;
+}
