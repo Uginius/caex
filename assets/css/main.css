@@ -1994,7 +1994,7 @@ section.bg-teal {
     font-size: 18px;
     color: var(--color-default);
     text-align: left;
-    background: var(--color-white);
+    background: #cee2ff;
     box-shadow: none;
     border-radius: 5px;
     position: relative;
@@ -2023,10 +2023,10 @@ section.bg-teal {
 }
 
 .faq .accordion-body {
-    padding: 0 30px 25px 60px;
+    padding: 15px 30px 25px 60px;
     border: 0;
     border-radius: 5px;
-    background: var(--color-white);
+    background: #ECECEC;
     box-shadow: none;
 }
 
