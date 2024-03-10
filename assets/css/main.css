@@ -3541,11 +3541,42 @@ section.bg-teal {
     padding: 25px 20px;
     box-shadow: 5px 5px 25px rgba(var(--color-secondary-rgb), 0.15);
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 503px;
+/*    max-height: 388px;*/
+    background: #E2F0FF;
+    border-radius: 20px;
 }
 
 .auth-form .btn {
-    width: 200px;
+    width: 100%;
+}
+
+.auth-form .text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    /* identical to box height, or 125% */
+    text-transform: uppercase;
+    text-align: center;
+    color: #1A1F24;
+/*    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+*/}
+
+.auth-form p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.auth-form .checkbox {
+    display: flex;
+    align-self: flex-end;
 }
 
 
