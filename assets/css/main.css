@@ -123,6 +123,19 @@ section.bg-teal {
     text-align: center;
     padding-bottom: 40px;
 }
+.section-header h1 {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    /* identical to box height, or 133% */
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #1A1F24;
+}
 
 .section-header h2 {
     font-size: 48px;
