@@ -149,6 +149,11 @@ section.bg-teal {
     color: var(--color-secondary-light);
 }
 
+@media (max-width: 990px) {
+    .section-header h1 {
+        font-size: 32px;
+    }
+}
 @media (min-width: 1280px) {
     .section-header p {
         max-width: 80%;
