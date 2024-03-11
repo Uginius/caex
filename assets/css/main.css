@@ -2318,8 +2318,11 @@ section.bg-teal {
 
 .contact .info {
     padding: 40px;
-    box-shadow: 0px 2px 15px rgba(var(--color-black-rgb), 0.1);
+/*    box-shadow: 0px 2px 15px rgba(var(--color-black-rgb), 0.1);*/
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 360px;
 }
 
 .contact .info h3 {
@@ -2336,7 +2339,7 @@ section.bg-teal {
 .contact .info-item + .info-item {
     padding-top: 20px;
     margin-top: 20px;
-    border-top: 1px solid rgba(var(--color-secondary-rgb), 0.15);
+/*    border-top: 1px solid rgba(var(--color-secondary-rgb), 0.15);*/
 }
 
 .contact .info-item i {
@@ -3348,7 +3351,7 @@ section.bg-teal {
     .footer .footer-content .footer-links {
         padding-top: 0;
     }
-    p {
+    .footer p {
         width: 100%;
         display: flex;
 /*        justify-content: center;*/  
@@ -4645,6 +4648,7 @@ section.bg-teal {
     border-radius: 20px;
     background-image: url("../../media/img/feedback-form.svg");
     background-size: auto 100%;
+    align-self: center;
 }
 
 .feedback-form h2 {
