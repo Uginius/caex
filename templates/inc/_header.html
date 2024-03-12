@@ -1,5 +1,5 @@
 <header id="header" class="header fixed-top" data-scrollto-offset="0">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center justify-content-between main-menu">
 
         <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
             <img src="/media/img/caex_logo.svg" alt="">
@@ -10,14 +10,18 @@
                 <li><a href="{% url 'faq' %}">FAQ</a></li>
                 <li><a href="{% url 'easy' %}">Buy/sell crypto</a></li>
                 <li><a href="{% url 'contacts' %}">Contacts</a></li>
-                {% if user.is_authenticated %}
-                    <li><a class="btn-getstarted" href="{% url 'about-me' %}">{{ user.username }}</a></li>
-                {% else %}
-                    <li><a class="btn-getstarted" href="{% url 'login' %}">Sign in</a></li>
-                {% endif %}
+                <li><a class="login" href="{% url 'login' %}">Sign in</a></li>
             </ul>
+        </nav>
+        <div>
+            {% if user.is_authenticated %}
+            <a class="btn-getstarted" href="{% url 'about-me' %}">{{    user.username }}</a>
+                {% else %}
+            <a class="btn-getstarted" href="{% url 'login' %}">Sign in</a>
+                {% endif %}
             <i class="bi bi-list mobile-nav-toggle d-none"></i>
-        </nav><!-- .navbar -->
+        </div>
+        <!-- .navbar -->
 
 
     </div>

@@ -3,44 +3,41 @@
 {% block content %}
 
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
-        <div class="container">
-            <br><br>
-            <h1>
-                {{ title }}
-            </h1>
-            <div class="row mt-5">
-                <div class="col-12 col-lg-9">
-                    <p>{% autoescape off %}{{ caption }}{% endautoescape %}</p>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <a href="{% url 'register' %}" class="btn btn-primary btn-get-started mx-auto">Sign Me Up</a>
-                </div>
-            </div>
+        <div class="container main-banner">
+            <div class="row left">
+                <div class="col title">
 
-        </div>
+                    {{ title }}
+                </div>
+                <div class="col caption">
+{#                    <div class="caption">{% autoescape off %}#}
+                        {{ caption }}
+{#                    {% endautoescape %}#}
+                    </div>
+                    <a href="{% url 'register' %}" class="col-9 b-button">
+                        <b class="textarea">Sign Me Up</b>
+                        <div class="icon" style="height: 26px;"><img src='media/img/sign-me-icon.png'></div>
+                    </a>
+                </div>
+
+                <div class="right">
+                    <img src="media/img/cards2.png">
+                </div>
+
+            </div>
     </section>
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services" data-aos="fade-up">
-        <div class="container">
+        <div class="container" style="padding: 0 0px 0 0;">
             {% autoescape off %}
-                <div class="row justify-content-around gy-4">
-                    {% for item in cryptoServices %}
-                        <div class="col-xl-3 col-md-6 d-flex">
-                            <div class="service-item position-relative">
-                                <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
-                                <h4> {{ item.title }} </h4>
-                                {% if item.caption %} <p>{{ item.caption }}</p> {% endif %}
-                            </div>
-                        </div><!-- End Service Item -->
-                    {% endfor %}
-                </div>
-                <div class="row  justify-content-around  gy-4">
+                <div class="row g-0 justify-content-around  gy-4">
                     {% for item in bankServices %}
-                        <div class="col-xl-3 col-md-6 d-flex">
+                        <div class="col-xl-3 col-md-6 d-flex justify-content-center">
                             <div class="service-item position-relative">
                                 <div class="icon"><img src="media/img/{{ item.icon }}" alt=""/></div>
-                                <h4> {{ item.title }} </h4>
-                                {% if item.caption %} <p>{{ item.caption }}</p> {% endif %}
+                                <b> {{ item.title }} </b>
+                                {% if item.caption %} <p
+                                        style="color: #1A1F24;opacity: 0.5;">{{ item.caption }}</p> {% endif %}
                             </div>
                         </div><!-- End Service Item -->
                     {% endfor %}
@@ -49,54 +46,60 @@
 
         </div>
     </section><!-- End Featured Services Section -->
-    <section class="steps">
-        <div class="container">
-            <h2>{{ step_title }}</h2>
-            <h2><br/></h2>
-            <div>
+    <section id="steps" class="s-steps d-flex justify-content-center">
+        <div class="row container steps">
+            <div class="col g-0 preview">
+                <b>{{ step_title }}</b>
+
+                <div class="time">
+                    <div class="icon"><img src="media/img/clock.png"></div>
+                    <p>On average, adults in the US use the same primary checking account for more than 17 years.</p>
+                </div>
+            </div>
+
+            <div class="items col">
                 {% for item in steps %}
-                    <div class="step__item">
-                        <div class="step__icon">
-                            <img src="/media/img/{{ item.icon }}" alt=""/>
+                    <div class="item">
+                        <div class="order">
+                            0{{ item.order }}
                         </div>
-                        <div class="step__text">
-                            <h3>{{ item.title }}</h3>
+                        <div class="line">
+                            <span class="step-line"></span>
+                            <img src="media/img/steps-icon.svg">
+                            <span class="step-line"></span>
+                        </div>
+                        <div class="text">
+                            <b>{{ item.title }}</b>
                             <p>{{ item.caption }}</p>
                         </div>
                     </div>
-                    {% if not forloop.last %}
-                        <h3 class="ms-5 mt-1 text-primary"><p>↓</p></h3>
-                    {% endif %}
                 {% endfor %}
-            </div>
-            <br> <br>
-            {% autoescape off %}
-                <div class="row mt-5 text-bg-success p-3">
-                    <div class="col-12 col-lg-1">
-                        <div class="mt-3">
-                            <h2><i class="bi bi-hourglass-split"></i></h2>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-11">
-                        <h3>{{ adult17 }}</h3>
-                    </div>
+                <div class="time-mobile">
+                    <div class="icon"><img src="media/img/clock.png"></div>
+                    <p>On average, adults in the US use the same primary checking account for more than 17 years.</p>
                 </div>
-            {% endautoescape %}
+            </div>
         </div>
     </section>
     <section id="onfocus" class="onfocus">
-        <div class="container" data-aos="fade-up">
+        <div class="container" style="padding: 0" data-aos="fade-up">
 
-            <div class="row g-0">
-                <div class="col-lg-12">
-                    <div class="content d-flex flex-column justify-content-center h-100">
-                        <h2>{{ caex_today.title }}</h2>
-                        {% autoescape off %} {{ caex_today.text }} {% endautoescape %}
-                        <a href="{% url 'register' %}" class="read-more align-self-start"><span>Sign Me Up</span></a>
+            <div class="row-p-0 bottom-banner">
+                <img class="col flex-grow-0 image" src="media/img/caex-team.jpg">
+                <div class="col bottom-info">
+                    <div class="title">{{ caex_today.title }}</div>
+                    <div class="caption">{% autoescape off %}
+                        
+                            {{ caex_today.text }}
+                        
+                    {% endautoescape %}
                     </div>
+                    <a href="{% url 'register' %}" class="button">
+                        <b class="textarea">Sign Me Up</b>
+                        <div class="icon" style="height: 26px;"><img src='media/img/sign-me-icon.png'></div>
+                    </a>
                 </div>
             </div>
-
         </div>
     </section><!-- End On Focus Section -->
 

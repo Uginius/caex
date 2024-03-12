@@ -1,64 +1,94 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <section class="bg-teal">
-        <div class="container">
+    <section class="expertises">
+        <div class="container" style="padding-left: 0px;">
             <h1 class="section-header">{% autoescape off %} {{ title }} {% endautoescape %}</h1>
-            <div class="row mx-auto gy-4 advantages featured-services">
+
+            {% autoescape off %}
+            <div class="row  justify-content-around gy-4" style="margin: 37px -12px 0 0;">
                 {% for expertise in trusted %}
-                    <div class="col-lg-6 col-12 d-flex">
-                        <div class="service-item flex-grow-1 text-center">
-                            <div class="icon"><img src="/media/img/easy_crypto/{{ expertise.image }}"></div>
-                            <h4>{{ expertise.title }}</h4>
-                            <p>{{ expertise.text }}</p>
-                        </div>
+                    <div class="service-item position-relative">
+                        <div class="icon"><img src="../media/img/easy_crypto/{{ expertise.image }}" alt=""/></div>
+                        <b> {{ expertise.title }} </b>
+                        {% if expertise.text %} 
+                          <p style="color: #1A1F24;opacity: 0.5;">{{ expertise.text }}</p>
+                        {% endif %}
                     </div>
+                <!-- End Service Item -->
                 {% endfor %}
             </div>
-        </div>
+            {% endautoescape %}
     </section>
     <section>
         <div class="payment-methods container">
-            <h2 class="h1 section-header">Payment methods & Interest rates</h2>
+            <p>Payment methods & Interest rates</p>
             <img class="payment-methods__schema" src="/media/img/easy_crypto/payment_methods.svg" alt=""/>
-            <p>CRYPTO* — BITCOIN, ETHEREUM, USDT (STABLECOINS)<br/>
-                BLOCKCHAIN TRANSACTION** - PAYMENT VIA SELECTED BLOCKCHAIN</p>
         </div>
     </section>
-    <section class="how-to bg-teal">
-        <div class="container">
-            <h2 class="h1 section-header">
-                How to buy/sell crypto
-            </h2>
-            <div class="how-to__list">
-                <div class="how-to__step how-to__step-1">
-                    <img class="how-to__image" src="/media/img/easy_crypto/how-to-1.png"/>
-                    Create your free account
-                </div>
-                <div class="how-to__step how-to__step-2">
-                    <img class="how-to__image" src="/media/img/easy_crypto/how-to-2.png"/>
-                    Complete your account setup by KYC/AML process.
-                </div>
-                <div class="how-to__step how-to__step-3">
-                    <img class="how-to__image" src="/media/img/easy_crypto/how-to-3.png"/>
-                    Choose the amount of crypto you’d like to buy or sell, then select your payment option.
-                </div>
-            </div>
 
+    <section id="steps" class="s-steps">
+        <div class="row container buy-steps">
+            <div class="col preview">
+                <b>How to buy/sell crypto</b>
+            </div>
+            
+            <div class="col items">
+                <div class="item">
+                    <div class="order">
+                        01
+                    </div>
+                    <div class="line">
+                        <span class="step-line"></span>
+                        <img src="../media/img/steps-icon.svg">
+                        <span class="step-line"></span>
+                    </div>
+                    <div class="text">
+                        <b>Create your free account</b>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="order">
+                        02
+                    </div>
+                    <div class="line">
+                        <span class="step-line"></span>
+                        <img src="../media/img/steps-icon.svg">
+                        <span class="step-line"></span>
+                    </div>
+                    <div class="text">
+                        <b>Complete your account setup by KYC/AML process.</b>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="order">
+                        03
+                    </div>
+                    <div class="line">
+                        <span class="step-line"></span>
+                        <img src="../media/img/steps-icon.svg">
+                        <span class="last-line"></span>
+                    </div>
+                    <div class="text">
+                        <b>Choose the amount of crypto you’d like to buy or sell, then select your payment option.</b>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
-    <section class="steps-buysell">
-        <div class="container">
-            <h2 class="h1 section-header">Onboarding process</h2>
-            <img class="payment-methods__schema" src="/media/img/easy_crypto/onboarding_updated_shema.svg" alt=""/>
+    <section class="buysell">
+        <div class="container steps-buysell">
+            <p>Onboarding process</p>
+            <img class="buysell-methods__schema" src="/media/img/easy_crypto/onboarding_updated_shema.svg" alt=""/>
         </div>
     </section>
     <section class="partners">
         <div class="container">
-            <h2 class="h1 section-header">Our partners</h2>
+            <p>Our partners</p>
             <div class="partners-list">
                 <img src="/media/img/easy_crypto/partners/amlbot-logo.svg" alt="AMLBot logo"/>
-                <img src="/media/img/easy_crypto/partners/argoskyc-logo.svg"/>
+                <img src="/media/img/easy_crypto/partners/argoskyc-logo.svg" alt="Argoskys logo"/>
             </div>
         </div>
     </section>

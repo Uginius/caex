@@ -2,14 +2,13 @@
 
 {% block content %}
     <section>
-        <div class="container">
+        <div class="container d-flex flex-column">
             <div class="section-header">
                 <h1>{{ title }}</h1>
                 <p>A 24/7 support specialist will contact you shortly.</p>
             </div>
-            <div class="row">
-                <div class="col-12 col-lg-6 contact">
-                    <div class="info">
+            <div class="row contact">
+                    <div class="col info">
                         <div class="info-item d-flex">
                             <i class="bi bi-journal flex-shrink-0"></i>
                             <div>
@@ -36,7 +35,7 @@
                         </div><!-- End Info Item -->
 
                     </div>
-                    <div class="info mt-5">
+                    <div class="col info">
 
                         <div class="info-item d-flex">
                             <i class="bi bi-geo-alt flex-shrink-0"></i>
@@ -54,8 +53,9 @@
                                 <p>Saturday: <b>9:00 am &mdash; 3:00 pm</b></p>
                                 <p>Sunday: <b>by appointment only</b></p>
                             </div>
-                        </div><!-- End Info Item -->
-                    </div>
+                        </div>
+                    </div><!-- End Info Item -->
+
                     {#                    <div class="d-flex justify-content-between mt-4">#}
                     {#                        {% for smm in socialmedia %}#}
                     {#                            <a href="{{ smm.account }}" class="{{ smm.style }} fs-1">#}
@@ -65,10 +65,11 @@
                     {##}
                     {#                    </div>#}
                 </div>
-                <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+            <div class="row justify-content-center feedback-form">
+                 <div class="col-12 col-lg-6 mt-5 mb-5 mt-lg-0 d-flex flex-column">
                     <h2>Feedback Form</h2>
-                    <p>Curious minds make us better. Share your questions and ideas.</p>
-                    <form action="" method="post">
+                    <p class="caption">Curious minds make us better. Share your questions and ideas.</p>
+                    <form style="max-width:441px;" action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit" class="btn btn-primary">Submit</button>

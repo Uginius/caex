@@ -10,10 +10,10 @@ class UserRegisterForm(UserCreationForm):
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(label='email', widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    crypto_exchange = forms.BooleanField(required=False)
-    foreign_exchange = forms.BooleanField(required=False)
-    bank_account = forms.BooleanField(required=False)
-    money_transfer = forms.BooleanField(required=False)
+    crypto_exchange = forms.BooleanField(widget=forms.CheckboxInput(attrs={'class': 'ms-auto'}), required=False)
+    foreign_exchange = forms.BooleanField(widget=forms.CheckboxInput(attrs={'class': 'ms-auto'}), required=False)
+    bank_account = forms.BooleanField(widget=forms.CheckboxInput(attrs={'class': 'ms-auto'}), required=False)
+    money_transfer = forms.BooleanField(widget=forms.CheckboxInput(attrs={'class': 'ms-auto'}), required=False)
 
     class Meta:
         model = User

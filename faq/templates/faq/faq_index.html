@@ -5,9 +5,9 @@
     <section id="faq" class="faq">
         <div class="container" data-aos="fade-up">
             <div class="row">
-                <div class="col-12">
-                    <div class="content px-xl-5">
-                        <h1 class="section-header">{{ title }}</h1>
+                <div class="col-12 justify-content-center">
+                    <div class="section-header">
+                        <h1 class="">{{ title }}</h1>
                     </div>
 
                     <div class="accordion accordion-flush px-xl-5" id="faqlist">
@@ -30,9 +30,10 @@
                             </div><!-- # Faq item-->
                         {% endfor %}
                         <br>
-                        <a href="{% url 'register' %}" class="btn btn-primary btn-get-started mx-auto">Sign Me Up</a>
+                        <!-- <a href="{% url 'register' %}" class="btn btn-primary btn-get-started mx-auto">Sign Me Up</a> -->
 
                     </div>
+                    <a href="{% url 'register' %}" class="btn btn-primary btn-get-started mx-auto d-flex justify-content-center" style="max-width: 300px;">Sign Me Up</a>
                 </div>
             </div>
 

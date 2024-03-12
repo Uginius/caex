@@ -2,28 +2,24 @@
 
     <div class="footer-content">
         <div class="container">
-            <div class="row">
+            <div class="row footer_mobile">
                 <img class="footer-logo" src="/media/img/caex_logo_white.svg">
             </div>
-            <div class="footer-info row">
-                <div class="col-12 col-lg-4">
+            <div class="row footer-info">
+                <div class="col-12 col-lg-4 d-flex flex-column footer-address footer_mobile">
                     <p>1800 S Brand Blvd Glendale,<br> CA 91204 United States<br>Unit 213</p>
-                    <br>
-                    <strong>Licence:</strong>
+                    <strong class="footer-strong">Licence:</strong>
                     <p>MSB License Number 31000251129247</p>
-                    <br>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4 d-flex flex-column footer-contacts footer_mobile">
                     <div>
-                        <strong>Phone:</strong>
-                        <p>+1 747 609 7005<br>+1 747 609 7278</p>
+                        <strong style="font-size: 16px;">Phone:</strong>
+                        <p style="line-height: 32px; margin-top: 10px;">+1 747 609 7005<br>+1 747 609 7278</p>
                     </div>
-                    {#                            <strong>Phone:</strong> +1 5589 55488 55<br>#}
-                    <br>
-                    <strong>Email:</strong>
-                    <p>info@caex.io</p>
+                    <strong class="mail">Email:</strong>
+                    <p style="margin-right: 25px;">info@caex.io</p>
                 </div>
-                <div class="col-lg-4 col-12 d-flex flex-column">
+                <div class="col-lg-4 col-12 d-flex flex-column footer_mobile">
                     <div class="footer-links ms-lg-auto mt-3 mt-lg-0">
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="{% url 'faq' %}">FAQ</a></li>
