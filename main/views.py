@@ -25,21 +25,6 @@ def index(request):
     return render(request, template_name='main/main.html', context=context)
 
 
-# def register(request):
-#     if request.method == 'POST':
-#         form = UserRegisterForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             messages.success(request, 'You have successfully registered')
-#             return redirect('home')
-#         else:
-#             messages.error(request, 'Registration error')
-#     else:
-#         form = UserRegisterForm()
-#     context = {'title': 'Sign UP', 'form': form, }
-#     return render(request, 'main/register.html', context=context)
-
-
 def create_profile(user, cleaned_data):
     pf = Profile.objects.create(user=user)
     pf.crypto_exchange = cleaned_data.get('crypto_exchange')
