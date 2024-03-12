@@ -1,6 +1,4 @@
-from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
-from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpRequest
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
