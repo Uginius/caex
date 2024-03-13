@@ -18,4 +18,3 @@ class QuesAdmin(admin.ModelAdmin):
     list_display = 'pk', 'order', 'question', 'note', 'answer_short', 'published', 'updated'
     list_display_links = 'order', 'question', 'note', 'answer_short'
     # form = PostAdminForm
-
