@@ -4709,3 +4709,56 @@ section.bg-teal {
 .feedback-form p {
     flex-direction: column;
 }
+
+.about-me {
+    max-width: 503px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+/*    text-align: center;*/
+    text-transform: uppercase;
+    color: #1A1F24;
+    flex: 80%;
+}
+
+.about-me-block {
+    background: #cee2ff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.about-me-block .about-data {
+    margin: 5px 0 5px 0;
+}
+
+.about-me-block .about-data:first-child {
+    margin-top: 15px;
+}
+
+.about-me-block .about-data:last-child {
+    margin-bottom: 15px;
+}
+
+.about-me-block .icon {
+    height: 26px;
+    max-width: 50px;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.about-me-block p {
+    margin-bottom: 0;
+}
+
+.about-me-block p:first-child {
+    opacity: 0.5;
+    font-size: 14px;
+}
