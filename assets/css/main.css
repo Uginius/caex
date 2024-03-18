@@ -4729,14 +4729,22 @@ section.bg-teal {
     flex: 80%;
 }
 
+.about-me .support {
+    text-align: end;
+    margin-bottom: 8px;
+    align-self: end;
+    margin-right: 10px;
+}
+
 .about-me-block {
-    background: #cee2ff;
+/*    background: #cee2ff;*/
+    background: #eef5ff;
     border-radius: 20px;
     margin-bottom: 15px;
 }
 
 .about-me-block .about-data {
-    margin: 5px 0 5px 0;
+    margin: 10px 0 10px 0;
 }
 
 .about-me-block .about-data:first-child {
@@ -4761,4 +4769,14 @@ section.bg-teal {
 .about-me-block p:first-child {
     opacity: 0.5;
     font-size: 14px;
+}
+
+.about-me-block .separator {
+    display: block;
+    height: 1px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0;
+    background: black;
+    opacity: 0.2;
 }

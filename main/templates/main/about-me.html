@@ -6,13 +6,18 @@
             <div class="about-me">
                 <div class="d-flex row align-items-end">
                     <h1 class="col">User info</h1>
-                    <p class="col" style="text-align: end;">
+                    <!-- <p class="col" style="text-align: end;">
                         <a href="{% url 'logout' %}">Logout</a>
-                    </p>
+                    </p> -->
                 </div>
                 {% if user.is_authenticated %}
                     
-                    <h3>Detail</h3>
+                    <div class="row">
+                        <h3 class="col">Detail</h3>
+                        <p class="col support">
+                            <a href="">Edit</a>
+                        </p>
+                    </div>
                     <div class="col about-me-block">
                         <div class="row about-data">
                             <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
@@ -21,6 +26,7 @@
                                 <p>{{ user.username }}</p>
                             </div>
                         </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
                         <div class="row about-data">
                             <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
                             <div class="col p-0">
@@ -28,6 +34,7 @@
                                 <p>{{ user.first_name }}</p>
                             </div>
                         </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
                         <div class="row about-data">
                             <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
                             <div class="col p-0">
@@ -35,6 +42,7 @@
                                 <p>{{ user.last_name }}</p>
                             </div>
                         </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
                         <div class="row about-data">
                             <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
                             <div class="col p-0">
@@ -44,22 +52,29 @@
                         </div>
                     </div>
                     
-                    <h3>Money</h3>
+                    <div class="row">
+                        <h3 class="col">Financial services</h3>
+                        <p class="col support">
+                            <a href="">Edit</a>
+                        </p>
+                    </div>
                     <div class="col about-me-block">
                         <div class="row about-data">
-                            <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
+                            <div class="col p-0 icon"><img    src='../media/img/icon-cryptowallet.png'></div>
                             <div class="col p-0">
                                 <p>Cryptocurrency Exchange</p>
                                 <p>{{ user.profile.crypto_exchange }}</p>
                             </div>
                         </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
                         <div class="row about-data">
-                            <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
+                            <div class="col p-0 icon"><img    src='../media/img/icon-banknotes.png'></div>
                             <div class="col p-0">
                                 <p>Foreign Currency Exchange</p>
                                 <p>{{ user.profile.foreign_exchange  }}</p>
                             </div>
                         </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
                         <div class="row about-data">
                             <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
                             <div class="col p-0">
@@ -67,15 +82,18 @@
                                 <p>(Powered by Neobank Solution) {{     user.profile.bank_account }}</p>
                             </div>
                         </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
                         <div class="row about-data">
-                            <div class="col p-0 icon"><img    src='../media/img/icon-monitor.png'></div>
+                            <div class="col p-0 icon"><img    src='../media/img/icon-money-cloud.png'></div>
                             <div class="col p-0">
                                 <p>Money Transfer</p>
                                 <p>{{ user.profile.money_transfer }}</p>
                             </div>
                         </div>
                     </div>
-                    
+                    <p class="col" style="text-align: end;">
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </p>
                 {% else %}
                     <h2>User is anonymous</h2>
                 {% endif %}
