@@ -4771,6 +4771,12 @@ section.bg-teal {
     font-size: 14px;
 }
 
+.about-me-block .powered {
+    color: #1A1F24;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
 .about-me-block .separator {
     display: block;
     height: 1px;
