@@ -1,10 +1,13 @@
+from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, TemplateView
 from content.models import Txt, Titles
-from main.forms import UserRegisterForm
+from main.forms import UserRegisterForm, UpdateUserForm, UpdateProfileForm
 from main.models import Profile, CoinService, Step
 
 
@@ -21,6 +24,21 @@ def index(request):
         'caex_today': Txt.objects.filter(tag='caex_today')[0],
     }
     return render(request, template_name='main/main.html', context=context)
+
+
+# def register(request):
+#     if request.method == 'POST':
+#         form = UserRegisterForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, 'You have successfully registered')
+#             return redirect('home')
+#         else:
+#             messages.error(request, 'Registration error')
+#     else:
+#         form = UserRegisterForm()
+#     context = {'title': 'Sign UP', 'form': form, }
+#     return render(request, 'main/register.html', context=context)
 
 
 def create_profile(user, cleaned_data):
@@ -71,3 +89,40 @@ def login_view(request: HttpRequest):
         return redirect(redirect_url_authenticated)
 
     return render(request, 'main/login.html', {'error': 'invalid login credentials'})
+
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        user_form = UpdateUserForm(request.POST, instance=request.user)
+        # profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+
+        if user_form.is_valid():
+            user_form.save()
+            # profile_form.save()
+            messages.success(request, 'Your profile is updated successfully')
+            return redirect(to='about-me')
+    else:
+        user_form = UpdateUserForm(instance=request.user)
+        # profile_form = UpdateProfileForm(instance=request.user.profile)
+
+    return render(request, 'main/edit.html', {'form': user_form})
+
+@login_required
+def edit_profile(request, context):
+    if context == 'profile':
+        form = UpdateUserForm
+        instance = request.user
+    else:
+        form = UpdateProfileForm
+        instance = request.user.profile
+    print(instance)
+    print(form)
+    if request.method == 'POST':
+        user_form = form(request.POST, instance=instance)
+        if user_form.is_valid():
+            user_form.save()
+            # messages.success(request, 'Your profile is updated successfully')
+            return redirect(to='about-me')
+    else:
+        form = form(instance=instance)
+    return render(request, 'main/edit.html', {'form': form})

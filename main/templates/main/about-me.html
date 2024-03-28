@@ -2,22 +2,103 @@
 {% block title %} About me {% endblock %}
 {% block content %}
     <section>
-        <div class="container">
-            <h1>User info</h1>
-            {% if user.is_authenticated %}
-                <h2>Detail</h2>
-                <p>Username: {{ user.username }}</p>
-                <p>First name: {{ user.first_name }}</p>
-                <p>Last name: {{ user.last_name }}</p>
-                <p>Email: {{ user.email }}</p>
-                <p>Cryptocurrency Exchange: {{ user.profile.crypto_exchange }}</p>
-                <p>Foreign Currency Exchange: {{ user.profile.foreign_exchange }}</p>
-                <p>Bank Account: (Powered by Neobank Solution) {{ user.profile.bank_account }}</p>
-                <p>Money Transfer: {{ user.profile.money_transfer }}</p>
-                <p><a href="{% url 'logout' %}">Logout</a></p>
-            {% else %}
-                <h2>User is anonymous</h2>
-            {% endif %}
+        <div class="container d-flex justify-content-center">
+            <div class="about-me">
+                <div class="d-flex row align-items-end">
+                    <h1 class="col">User info</h1>
+                    <!-- <p class="col" style="text-align: end;">
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </p> -->
+                </div>
+                {% if user.is_authenticated %}
+                    
+                    <div class="row">
+                        <h3 class="col">Detail</h3>
+                        <p class="col support">
+                            <a href="{% url 'edit' context='profile'%}">Edit</a>
+                        </p>
+                    </div>
+                    <div class="col about-me-block">
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img src=''></div>
+                            <div class="col p-0">
+                                <p>Username</p>
+                                <p>{{ user.username }}</p>
+                            </div>
+                        </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img src=''></div>
+                            <div class="col p-0">
+                                <p>First name</p>
+                                <p>{{ user.first_name }}</p>
+                            </div>
+                        </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img src=''></div>
+                            <div class="col p-0">
+                                <p>Last name</p>
+                                <p>{{ user.last_name }}</p>
+                            </div>
+                        </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img src=''></div>
+                            <div class="col p-0">
+                                <p>Email</p>
+                                <p>{{ user.email }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <h3 class="col">Financial services</h3>
+                        <p class="col support">
+                            <a href="{% url 'edit' context='financial'%}">Edit</a>
+                        </p>
+                    </div>
+                    <div class="col about-me-block">
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img    src='/media/img/icon-cryptowallet.png'></div>
+                            <div class="col p-0">
+                                <p>Cryptocurrency Exchange</p>
+                                <p>{{ user.profile.crypto_exchange }}</p>
+                            </div>
+                        </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img    src='/media/img/icon-banknotes.png'></div>
+                            <div class="col p-0">
+                                <p>Foreign Currency Exchange</p>
+                                <p>{{ user.profile.foreign_exchange  }}</p>
+                            </div>
+                        </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img    src='/media/img/icon-monitor.png'></div>
+                            <div class="col p-0">
+                                <p>Bank Account</p>
+                                <p class="powered">(Powered by Neobank Solution)</p> 
+                                <p>{{ user.profile.bank_account }}</p>
+                            </div>
+                        </div>
+                        <div class="separator" role="separator" aria-orientation="vertical" aria-hidden="true"></div>
+                        <div class="row about-data">
+                            <div class="col p-0 icon"><img    src='/media/img/icon-money-cloud.png'></div>
+                            <div class="col p-0">
+                                <p>Money Transfer</p>
+                                <p>{{ user.profile.money_transfer }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="col">
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </p>
+                {% else %}
+                    <h2>User is anonymous</h2>
+                {% endif %}
+            </div>
         </div>
     </section>
 

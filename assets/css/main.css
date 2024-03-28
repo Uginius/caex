@@ -124,16 +124,13 @@ section.bg-teal {
     padding-bottom: 40px;
 }
 .section-header h1 {
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 64px;
-    /* identical to box height, or 133% */
     text-align: center;
     text-transform: uppercase;
-    
     color: #1A1F24;
 }
 
@@ -267,11 +264,6 @@ section.bg-teal {
     background: #fff;
 }
 
-/*.header .logo img {
-    height: 40px;
-    margin-right: 6px;
-}*/
-
 .header .logo img {
   position: absolute;
   width: 152px;
@@ -294,13 +286,6 @@ section.bg-teal {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-    /*font-size: 16px;
-    color: var(--color-white);
-    background: var(--color-primary);
-    padding: 8px 23px;
-    border-radius: 4px;
-    transition: 0.3s;
-    font-family: var(--font-secondary);*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -368,14 +353,9 @@ section.bg-teal {
 
     .navbar a,
     .navbar a:focus {
-       /* display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 14px 20px;*/
         font-family: var(--font-secondary);
         font-size: 16px;
         font-weight: 400;
-/*        color: rgba(var(--color-secondary-dark-rgb), 0.7);*/
         white-space: nowrap;
         transition: 0.3s;
         position: relative;
@@ -605,10 +585,6 @@ section.bg-teal {
         line-height: 0;
         transition: 0.5s;
         margin-right: 10px;
-        /*position: fixed;
-        top: 20px;
-        z-index: 9999;
-        right: 20px;*/
     }
 
     .mobile-nav-toggle.bi-x {
@@ -647,9 +623,6 @@ section.bg-teal {
 --------------------------------------------------------------*/
 .hero-animated {
     width: 100%;
-/*    min-height: 50vh;*/
-/*    background: #3b5380;*/
-/*    background-size: cover;*/
     position: relative;
     padding: 120px 0 0;
 }
@@ -1151,12 +1124,8 @@ section.bg-teal {
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services .service-item {
-/*    padding: 30px;*/
     transition: all ease-in-out 0.4s;
-/*    height: 100%;*/
     text-align: start;
-/*    width: 100%;*/
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1212,12 +1181,6 @@ section.bg-teal {
     justify-content: start;
 }
 
-/*
-.featured-services .service-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 0 60px 0 rgba(var(--color-secondary-rgb), 0.1);
-}
-*/
 .featured-services .service-item:hover h4 a {
     color: var(--color-primary);
 }
@@ -2046,6 +2009,7 @@ section.bg-teal {
     border-radius: 5px;
     background: #ECECEC;
     box-shadow: none;
+    font-family: 'Suisse Intl';
 }
 
 /*--------------------------------------------------------------
@@ -2336,7 +2300,6 @@ section.bg-teal {
 
 .contact .info {
     padding: 40px;
-/*    box-shadow: 0px 2px 15px rgba(var(--color-black-rgb), 0.1);*/
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -2357,7 +2320,6 @@ section.bg-teal {
 .contact .info-item + .info-item {
     padding-top: 20px;
     margin-top: 20px;
-/*    border-top: 1px solid rgba(var(--color-secondary-rgb), 0.15);*/
 }
 
 .contact .info-item i {
@@ -3130,7 +3092,6 @@ section.bg-teal {
 }
 
 .footer .footer-content {
-/*    height: 549px;*/
     background: #05107C;
     padding: 60px 0 30px 0;
 }
@@ -3155,7 +3116,6 @@ section.bg-teal {
 }
 
 .footer .footer-content .footer-info p {
-/*    font-size: 14px;*/
     line-height: 31px;
     margin-bottom: 0;
     font-family: var(--font-primary);
@@ -3348,7 +3308,6 @@ section.bg-teal {
     }
 
     .footer_mobile {
-/*        justify-content: center;*/
         align-items: self-start;
         margin-left: 10%;
         padding-left: 0;
@@ -3363,7 +3322,6 @@ section.bg-teal {
     .footer-contacts .mail {
         font-size: 16px;
         margin-top: 20px;
-/*        margin-right: 73px;*/
     }
 
     .footer .footer-content .footer-links {
@@ -3372,24 +3330,18 @@ section.bg-teal {
     .footer p {
         width: 100%;
         display: flex;
-/*        justify-content: center;*/  
-/*        text-align: center;*/
     }
     strong {
         display: flex;
         margin-top: 30px;
-/*        justify-content: center;*/
     }
 }
 
 /*End footer*/
 
-
 .advantages {
     max-width: 800px;
 }
-
-
 
 .payment-methods {
     display: flex;
@@ -3397,36 +3349,26 @@ section.bg-teal {
     justify-content: flex-start;
     align-items: center;
     padding: 24px;
-/*    gap: 24px;*/
-    
     width: 930px;
     height: 366px;
-    
     background: #E2F0FF;
     border-radius: 20px;
-    
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
-
     margin-top: -40px;
 }
 
 .payment-methods p {
     width: 612px;
     height: 40px;
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    /* identical to box height, or 125% */
     text-transform: uppercase;
-    
     color: #232425;
-        /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -3520,10 +3462,8 @@ section.bg-teal {
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    /* identical to box height, or 125% */
     text-transform: uppercase;
     color: #232425;
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -3563,7 +3503,6 @@ section.bg-teal {
     box-shadow: 5px 5px 25px rgba(var(--color-secondary-rgb), 0.15);
     margin: 0 auto;
     max-width: 503px;
-/*    max-height: 388px;*/
     background: #E2F0FF;
     border-radius: 20px;
 }
@@ -3578,17 +3517,13 @@ section.bg-teal {
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    /* identical to box height, or 125% */
     text-transform: uppercase;
     text-align: center;
     color: #1A1F24;
-/*    
-    
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
-*/}
+}
 
 .auth-form p {
     display: flex;
@@ -3603,7 +3538,6 @@ section.bg-teal {
 /*Steps block*/
 
 .steps {
-/*    background: rgba(var(--color-secondary-rgb), 0.2);*/
     display: flex;
     flex-direction: row;
     padding-left: 0px;
@@ -3614,56 +3548,35 @@ section.bg-teal {
     display: flex;
     flex-direction: column;
     flex: 45%;
-
- /*   @media (max-width: 990px) {
-        width: auto;
-        height: auto;
-        text-align: center;
-    }
-*/}
+}
 
 .steps .preview b {
     width: 376px;
     height: 160px;
-    
-    font-family: 'Poppins';
+        font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    /* or 125% */
     text-transform: uppercase;
     color: #232425;
     flex: none;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-
-/*@media (max-width: 990px) {
-    width: auto;
-    height: auto;
-    margin-bottom: 15px;
-}    */
 }
 
 .steps .preview .time {
     width: 376px;
     height: 320px;
-
     background: #F4F4F4;
     border-radius: 10px;
-
-/* Inside auto layout */
     flex: none;
     order: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 39px;
-
-/*    @media (max-width: 990px) {
-    display: none;
-}    */
 }
 
 .steps .preview .time .icon {
@@ -3678,16 +3591,11 @@ section.bg-teal {
     left: calc(50% - 318px/2);
     top: 164px;
     margin-top: 41px;
-
-/*    font-family: 'Suisse Int'l';*/
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-/* or 140% */
     text-align: center;
-
-/* blue */
     color: #286DEB;
 }
 
@@ -3696,21 +3604,13 @@ section.bg-teal {
     display: none;
     width: auto;
     height: auto;
-
     background: #F4F4F4;
     border-radius: 10px;
-
-/* Inside auto layout */
     flex: none;
     order: 1;
-/*    display: flex;*/
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
-
-/*    @media (max-width: 990px) {
-        display:flex;
-    }*/
 }
 
 .steps .items .time-mobile .icon {
@@ -3727,16 +3627,11 @@ section.bg-teal {
     left: calc(50% - 318px/2);
     top: 164px;
     margin-top: 41px;
-
-/*    font-family: 'Suisse Int'l';*/
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-/* or 140% */
     text-align: center;
-
-/* blue */
     color: #286DEB;  
 }
 
@@ -3746,34 +3641,18 @@ section.bg-teal {
     flex-direction: column;
     flex: 50%;
     justify-content: space-between;
-
-/*    @media (max-width: 990px) {
-        flex: 100%
-    }*/
 }
 
 .steps .items .item {
     display: flex;
-/*    align-items: flex-start;*/
-/*    margin-bottom: 4px;*/
     flex-grow: 1;
-/*    @media (max-width: 990px) {
-        align-items: unset;
-    }
-*/}
-
-/*.step__item:not(:first-child) {
-    margin-top: 64px;
-}*/
+}
 
 .steps .items .item .order {
-/*position: absolute;*/
     width: 17px;
     height: 16px;
     left: 0px;
     top: 9px;
-
-/*font-family: 'Suisse Int'l';*/
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -3789,67 +3668,41 @@ section.bg-teal {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-
     width: 433px;
-/*    height: 76px;*/
-
-
-/* Inside auto layout */
     flex: 1;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
 
-/*    @media (max-width: 990px) {
-        width: auto;
-        flex: auto;
-    }*/
 }
 
 .steps .items .item .text b {
     width: 433px;
-    /*font-family: 'Suisse Int'l';*/
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
-    /* identical to box height, or 160% */
     color: #2B70EF;
-    /* Inside auto layout */
     flex: none;
     order: 0;
     align-self: stretch;
-
-/*    @media (max-width: 990px) {
-        width: auto;
-    }*/
 }
 
 .steps .items .item .text p {
-    /* For those who just arrived in the country and do not yet have a bank account */
-
     width: 433px;
     height: 40px;
-
-/*font-family: 'Suisse Intl';*/
+    font-family: 'Suisse Intl';
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-/* or 143% */
     display: flex;
     align-items: center;
-
     color: #1A1F24;
-    /* Inside auto layout */
     flex: 1;
     order: 1;
     align-self: stretch;
     margin-bottom: 0;
-
-/*    @media (max-width: 990px) {
-        width: auto;
-    }*/
 }
 
 .steps .items .item .line {
@@ -3858,13 +3711,11 @@ section.bg-teal {
     left: 33px;
     top: 13px;
     margin-left: 15px;
-/*    margin-top: 3px;*/
     background: #FFFFFF;
     height: 100%;
 }
 
 .steps .items .item .line img {
-/*    position: absolute;*/
     width: 10px;
     height: 10px;
     left: 33px;
@@ -3875,7 +3726,6 @@ section.bg-teal {
 }
 
 .steps .items .item .step-line {
-    /* Vector */
     display: flex;
     width: 0px;
     height: 100%;
@@ -3887,21 +3737,6 @@ section.bg-teal {
 
 .steps .items .item .step-line:nth-child(1) {
     height: 15px;
-}
-
-.step__icon {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: none;
-    margin-right: 64px;
-}
-
-.step__icon img {
-    display: block;
-    width: 100%;
 }
 
 @media (max-width:990px) {
@@ -3940,12 +3775,12 @@ section.bg-teal {
 /*END STEPS BLOCK*/
 
 .main-menu {
-  position: absolute;
-  width: 930px;
-  height: 78px;
-  left: calc(50% - 930px/2);
-  background: #ECECEC;
-  border-radius: 12px;
+    position: absolute;
+    width: 930px;
+    height: 78px;
+    left: calc(50% - 930px/2);
+    background: #ECECEC;
+    border-radius: 12px;
 }
 
 @media (max-width: 991px) {
@@ -3963,14 +3798,14 @@ section.bg-teal {
 }
 
 .hero-animated .main-banner {
-  background-image: url("../../media/img/banner-image.png");
-  display: flex;
-  flex-direction: row;
-  border-radius: 12px;
-  width: 930px;
-  max-height: 370px;
-  left: calc(50% - 930px/2);
-  top: 170px;
+    background-image: url("../../media/img/banner-image.png");
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    width: 930px;
+    max-height: 370px;
+    left: calc(50% - 930px/2);
+    top: 170px;
 }
 
 .hero-animated .main-banner .left {
@@ -3997,7 +3832,6 @@ section.bg-teal {
     align-items: center;
     padding: 16px 32px;
     gap: 10px;
-/*    width: 870px;*/
     height: 63px;
     left: 30px;
     bottom: 30px;
@@ -4009,48 +3843,40 @@ section.bg-teal {
 }
 
 .hero-animated .main-banner .left .b-button .textarea {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
-  width: 90px;
-  height: 24px;
-  color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 90px;
+    height: 24px;
+    color: white;
 } 
 
 .hero-animated .main-banner .left .title {
-/*    width: 533px;*/
     height: 128px;
     left: 30px;
     top: 30px;
-
     padding: 61px 0px 0px 17px ;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 56px;
-    /* or 133% */
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
 .hero-animated .main-banner .left .caption {
     padding: 60px 17px ; 
-/*    width: 437px;*/
     height: 26px;
     left: 30px;
     top: 178px;
-
     font-family: Suisse Int'l';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-/* identical to box height */
-
     color: #FFFFFF;
 }
 
@@ -4086,13 +3912,10 @@ section.bg-teal {
 
 .bottom-banner {
     max-width: 930px;
-/*    height: 459px;*/
     left: calc(50% - 930px/2);
     top: 1479px;
-
     background: #F4F4F4;
     border-radius: 20px;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -4117,25 +3940,18 @@ section.bg-teal {
 }
 
 .bottom-info .title {
-    /* CAEX today */
-
-/*    width: 339px;*/
     height: 32px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 32px;
-    /* identical to box height, or 100% */
     text-transform: uppercase;
-
     color: #1A1F24;
     flex: none;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
-
     display: flex;
     margin: 31px 0px 0px 32px;
 }
@@ -4150,16 +3966,12 @@ section.bg-teal {
 .bottom-info .text {
     width: 339px;
     height: 48px;
-
     font-family: 'Suisse Intl';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
-
     color: #1A1F24;
-
-    /* Inside auto layout */
     flex: none;
     order: 1;
     align-self: stretch;
@@ -4167,10 +3979,8 @@ section.bg-teal {
 }
 
 .bottom-info .list-icon {
-    /* Frame */
     width: 24px;
     height: 24px;
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -4190,15 +4000,10 @@ section.bg-teal {
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-
     width: 80%;
     max-width: 450px;
-/*    height: 24px;*/
-
-    /* Inside auto layout */
     flex: 1;
     order: 1;
-    
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -4212,12 +4017,10 @@ section.bg-teal {
     align-items: center;
     padding: 16px 32px;
     gap: 10px;
-
     width: 181px;
     height: 40px;
     left: 507px;
     bottom: 32px;
-
     background: #286DEB;
     border-radius: 8px;
     margin: auto 32px 32px 32px;
@@ -4238,8 +4041,6 @@ section.bg-teal {
 .bottom-banner .button .icon {
     width: 12px;
     height: 12px;
-    
-    /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -4263,50 +4064,40 @@ section.bg-teal {
     }
     .bottom-banner .image {
         border-radius: 20px;
-
     }
 
 }
+
 /*=======================================================*/
+
 .expertises .service-item {
     transition: all ease-in-out 0.4s;
     text-align: start;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 16px;
     gap: 5px;
-
     width: 218px;
     height: 190px;
-
     background: #F4F4F4;
     border-radius: 10px;
-
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
 .expertises h1 {
-
     width: 930px;
     height: 192px;
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 64px;
-    /* or 133% */
     text-transform: uppercase;
     text-align: left;
-    
     color: #1A1F24;
-    
-    
-    /* Inside auto layout */
     flex: none;
     order: 1;
     align-self: stretch;
@@ -4317,16 +4108,13 @@ section.bg-teal {
 .expertises .service-item p {
     width: 190px;
     height: 60px;
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    /* or 143% */
     color: #1A1F24;
     opacity: 0.5;
-    /* Inside auto layout */
     flex: none;
     order: 1;
     align-self: stretch;
@@ -4365,7 +4153,6 @@ section.bg-teal {
 }
 
 .buy-steps {
-/*    background: rgba(var(--color-secondary-rgb), 0.2);*/
     display: flex;
     flex-direction: row;
     padding-left: 0px;
@@ -4382,13 +4169,11 @@ section.bg-teal {
 .buy-steps .preview b {
     width: 376px;
     height: 160px;
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    /* or 125% */
     text-transform: uppercase;
     color: #232425;
     flex: none;
@@ -4400,11 +4185,8 @@ section.bg-teal {
 .buy-steps .preview .time {
     width: 376px;
     height: 320px;
-
     background: #F4F4F4;
     border-radius: 10px;
-
-/* Inside auto layout */
     flex: none;
     order: 1;
     display: flex;
@@ -4425,16 +4207,11 @@ section.bg-teal {
     left: calc(50% - 318px/2);
     top: 164px;
     margin-top: 41px;
-
-/*    font-family: 'Suisse Intl';*/
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-/* or 140% */
     text-align: center;
-
-/* blue */
     color: #286DEB;
 }
 
@@ -4448,7 +4225,6 @@ section.bg-teal {
 .buy-steps .items .item {
     display: flex;
     align-items: flex-start;
-/*    margin-bottom: 4px;*/
     flex-grow: 1;
 }
 
@@ -4457,13 +4233,10 @@ section.bg-teal {
 }
 
 .buy-steps .items .item .order {
-/*position: absolute;*/
     width: 17px;
     height: 16px;
     left: 0px;
     top: 9px;
-
-/*font-family: 'Suisse Intl';*/
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -4479,7 +4252,6 @@ section.bg-teal {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-
     width: 433px;
     flex: 1;
     order: 0;
@@ -4490,14 +4262,11 @@ section.bg-teal {
 .buy-steps .items .item .text b {
     width: 433px;
     height: 32px;
-/*    font-family: 'Suisse Intl';*/
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
-    /* identical to box height, or 160% */
     color: #2B70EF;
-    /* Inside auto layout */
     flex: none;
     order: 0;
     align-self: stretch;
@@ -4510,7 +4279,6 @@ section.bg-teal {
     left: 33px;
     top: 13px;
     margin-left: 15px;
-/*    margin-top: 3px;*/
     background: #FFFFFF;
     height: 100%;
 }
@@ -4542,7 +4310,6 @@ section.bg-teal {
 }
 
 .buy-steps .items .item .last-line {
-    /* Vector */
     display: flex;
     width: 0px;
     height: 45%;
@@ -4558,7 +4325,6 @@ section.bg-teal {
         width: auto;
     }
     .buy-steps .preview {
-/*        justify-content: center;*/
         text-align: center;
         flex: 100%;
     }
@@ -4573,8 +4339,6 @@ section.bg-teal {
         flex: 100%;
     }
     .buy-steps .items .item .text {
-/*        width: fit-content;*/ 
-/*        flex: none;*/
         width: auto;
         flex: auto;
     }
@@ -4591,20 +4355,17 @@ section.bg-teal {
 .buysell {
     padding-bottom: 0;
 }
+
 .steps-buysell {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 32px;
     gap: 24px;
-    
     width: 930px;
     height: 572.17px;
-    
     background: #E2F0FF;
     border-radius: 20px;
-    
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -4613,23 +4374,15 @@ section.bg-teal {
 }
 
 .steps-buysell p {
-    /* Onboarding process */
-
     width: 375px;
     height: 40px;
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    /* identical to box height, or 125% */
     text-transform: uppercase;
-    
     color: #232425;
-    
-    
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -4663,7 +4416,6 @@ section.bg-teal {
 .feedback-form {
     max-width: 930px;
     width: 100%;
-/*    max-height: 718px;*/
     border-radius: 20px;
     background-image: url("../../media/img/feedback-form.svg");
     background-size: auto 100%;
@@ -4683,17 +4435,11 @@ section.bg-teal {
 .feedback-form .caption {
     display: flex;
     align-self: center;
-/*    position: absolute;*/
-/*    width: 150%;*/
-/*    height: 32px;*/
-/*    left: calc(50% - 576px/2);*/
-/*    top: 108px;*/
     font-family: 'Suisse Intl';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
-    /* identical to box height, or 160% */
     text-align: center;
     color: #1A1F24;
     }
@@ -4707,4 +4453,80 @@ section.bg-teal {
 
 .feedback-form p {
     flex-direction: column;
+}
+
+/*About me */
+
+.about-me {
+    max-width: 503px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-transform: uppercase;
+    color: #1A1F24;
+    flex: 80%;
+}
+
+.about-me .support {
+    text-align: end;
+    margin-bottom: 8px;
+    align-self: end;
+    margin-right: 10px;
+}
+
+.about-me-block {
+    background: #eef5ff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.about-me-block .about-data {
+    margin: 10px 0 10px 0;
+}
+
+.about-me-block .about-data:first-child {
+    margin-top: 15px;
+}
+
+.about-me-block .about-data:last-child {
+    margin-bottom: 15px;
+}
+
+.about-me-block .icon {
+    height: 26px;
+    max-width: 50px;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.about-me-block p {
+    margin-bottom: 0;
+}
+
+.about-me-block p:first-child {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.about-me-block .powered {
+    color: #1A1F24;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.about-me-block .separator {
+    display: block;
+    height: 1px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0;
+    background: #e0e6f0;
 }
