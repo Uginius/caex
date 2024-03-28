@@ -2009,7 +2009,7 @@ section.bg-teal {
     border-radius: 5px;
     background: #ECECEC;
     box-shadow: none;
-    font-family: 'Suisse Intl';
+    /*font-family: 'Suisse Intl';*/
 }
 
 /*--------------------------------------------------------------
@@ -3691,7 +3691,7 @@ section.bg-teal {
 .steps .items .item .text p {
     width: 433px;
     height: 40px;
-    font-family: 'Suisse Intl';
+    /*font-family: 'Suisse Intl';*/
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
